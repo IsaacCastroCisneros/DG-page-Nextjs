@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+   overflow-x: hidden;
+}
+
+.my-container {
+   max-width: 100%;
+   margin: 0 auto;
+   width: 1920px;
+}
+
+.my-hover {
+   transition: all ease-in-out 200ms;
+   opacity: .8;
+}
+
+.my-hover:hover {
+   opacity: 1;
+}
+
+.container
+{
+   max-width: 1500px;
+   margin: 0 auto;
+   padding: 1.8rem 1.25rem;
+}
+
+.just-stuff
+{
+   margin: 0 auto;
+   max-width: 100%;
+}
+
+.slick-prev:before, .slick-next:before
+{
+  color: #0d6efd;
+}
+
+.slick-my-dots
+{
+   position: absolute;
+   bottom: 1rem;
+   display: flex !important;
+   gap: .5rem;
+   transform: translateX(-50%);
+   left: 50%;
+}
+
+.slick-my-dots .slick-active span
+{
+  background-color: #fff;
+} 
+
+h1,h2,h3
+{
+   font-weight:800;
+   color: #212529;
+}
+
+
+.swing:hover {
+   animation-name: swing;
+   -webkit-animation-name: swing;
+   -moz-animation-name: swing;
+   animation-duration: 1s;
+   -webkit-animation-duration: 1s;
+   -moz-animation-duration: 1s;
+}
+
+@keyframes swing {
+   20% {
+      transform: rotate3d(0, 0, 1, 15deg);
+   }
+
+   40% {
+      transform: rotate3d(0, 0, 1, -10deg);
+   }
+
+   60% {
+      transform: rotate3d(0, 0, 1, 5deg);
+   }
+
+   80% {
+      transform: rotate3d(0, 0, 1, -5deg);
+   }
+
+   to {
+      transform: rotate3d(0, 0, 1, 0deg);
+   }
+}
+
+.slick-arrow{
+   display: none !important;
+}
