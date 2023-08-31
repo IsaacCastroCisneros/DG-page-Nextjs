@@ -6,12 +6,12 @@ export default async function Home()
   return (
     <>
       <Carosuel/>
-      <Stripe />
+      {/* <Stripe />
       <MostrarCards program="proximos inicios" programSelector />
       <BeneficiosDeNuestrosProgramas />
       <CentroDeCapacitacion/>
       <CertificiacionIso/>
-      <EstamosEnLinea/>
+      <EstamosEnLinea/> */}
     </>
   );
 }
