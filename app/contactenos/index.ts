@@ -1,6 +1,0 @@
-export {ContactenosBanner} from './components/ContactenosBanner/ContactenosBanner'
-export {ContactenosStripe} from './components/ContactenosStripe/ContactenosStripe'
-export {AcercaDeNosotros} from './components/AcercaDeNosotros/AcercaDeNosotros'
-export {GarantiaDeCalidad} from './components/GarantiaDeCalidad/GarantiaDeCalidad'
-export {DondeEstamos} from './components/DondeEstamos/DondeEstamos'
-export {CentroDeCapacitacion} from './components/CentroDeCapacitacion/CentroDeCapacitacion'
