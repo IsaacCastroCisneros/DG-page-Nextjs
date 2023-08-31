@@ -29,10 +29,10 @@ export default function gettingUrl(type:apiurl,tag:string="")
         {
            return 'https://aula.desarrolloglobal.pe/v03/api/inhouses'
         }
-        case 'seminarios':
+       /*  case 'seminarios':
         {
            return `https://aula.desarrolloglobal.pe/v03/api/seminarios/${id}${limit}?offset=0` 
-        }
+        } */
   
         default: return ''
     }
