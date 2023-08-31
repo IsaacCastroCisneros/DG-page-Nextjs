@@ -13,7 +13,6 @@ export const metadata:Metadata=
   openGraph:
   {
     title,
-    images:"/img/DG-Logotipo_Color.webp",
     description
   }
 }
