@@ -8,9 +8,9 @@ export default async function Home()
       <Carosuel/>
       <Stripe />
       <MostrarCards program="proximos inicios" programSelector />
-      {/* <BeneficiosDeNuestrosProgramas />
+      <BeneficiosDeNuestrosProgramas />
       <CentroDeCapacitacion/>
-      <CertificiacionIso/>
+{/*       <CertificiacionIso/>
       <EstamosEnLinea/> */}
     </>
   );
