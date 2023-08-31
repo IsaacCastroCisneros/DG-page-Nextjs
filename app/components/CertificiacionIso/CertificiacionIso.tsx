@@ -9,7 +9,7 @@ export const CertificiacionIso = () =>
 {
   return (
     <MyBlock>
-      <CertificacionIsoBox styles="items-start mt-[4.9rem] certificacionIso:mt-[0]" />
+     {/*  <CertificacionIsoBox styles="items-start mt-[4.9rem] certificacionIso:mt-[0]" /> */}
       <EntidadesQueConfiarion />
     </MyBlock>
   );

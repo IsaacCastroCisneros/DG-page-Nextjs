@@ -1,9 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
+import { twMerge } from 'tailwind-merge'
 
 export const CertificacionIsoBox = ({styles}:{styles?:string}) => {
   return (
-    <div className={`mb-[4rem] px-[48px] py-[24px] shadow-2xl gap-[2rem] flex justify-center items-center max-w-[750px] flex-wrap ${styles}`}>
+    <div className={twMerge('mb-[4rem] px-[48px] py-[24px] shadow-2xl gap-[2rem] flex justify-center items-center max-w-[750px] flex-wrap',styles)}>
     <Image
       src="/img/Iso9001.webp"
       height={132.5}
