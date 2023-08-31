@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 export async function generateMetadata({params}:any):Promise<Metadata>
 {
-  return await getMetadata(params,'cursos')
+  return await getMetadata(params,'diplomas')
 }
 
 export default async function DriplomasName({params}:any) 
