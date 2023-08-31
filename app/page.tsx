@@ -10,8 +10,8 @@ export default async function Home()
       <MostrarCards program="proximos inicios" programSelector />
       <BeneficiosDeNuestrosProgramas />
       <CentroDeCapacitacion/>
-      <CertificiacionIso/>
-{/*       <EstamosEnLinea/> */}
+{/*       <CertificiacionIso/> */}
+      <EstamosEnLinea/>
     </>
   );
 }
