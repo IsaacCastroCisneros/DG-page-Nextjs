@@ -8,7 +8,8 @@ const nextConfig = { experimental: {
       "nuevapagina.s3.amazonaws.com",
       "s3-us-west-2.amazonaws.com",
       "s3.amazonaws.com",
-      "archivos-comunes.s3.amazonaws.com"
+      "archivos-comunes.s3.amazonaws.com",
+      "images.unsplash.com"
     ],
   },}
 
