@@ -11,7 +11,7 @@ export default async function Home()
       <BeneficiosDeNuestrosProgramas />
       <CentroDeCapacitacion/>
       <CertificiacionIso/>
-      <EstamosEnLinea/>
+{/*       <EstamosEnLinea/> */}
     </>
   );
 }
