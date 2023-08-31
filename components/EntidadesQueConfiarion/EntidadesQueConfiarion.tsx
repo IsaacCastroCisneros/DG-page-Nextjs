@@ -39,9 +39,9 @@ export const EntidadesQueConfiarion = () => {
             },
           ]}
         >
-         {/*  {entidades.map((ent, pos) => (
+          {entidades.map((ent, pos) => (
             <Entidad key={pos} img={ent} />
-          ))} */}
+          ))}
         </Slider>
       </div>
     </>
