@@ -2,47 +2,38 @@ import apiurl from "@/types/apiUrl";
 
 export default function gettingUrl(type:apiurl,tag:string="")
 {
-    const url ='https://aula.desarrolloglobal.pe/v03/api/'
 
     switch(type)
     {
+      case 'modal':
+        {
+            return 'https://aula.desarrolloglobal.pe/v03/api/modal/envivo'
+        }
         case 'diplomas':
         {
-          return `${url}diplomas/${tag}`;   
+            return 'https://aula.desarrolloglobal.pe/v03/api/diplomas/envivo/'+tag 
         }
         case 'cursos':
         {
-          return `${url}cursos/${tag}` 
+            return 'https://aula.desarrolloglobal.pe/v03/api/cursos/envivo/'+tag
+        }
+        case 'geo':
+        {
+            return 'https://ipgeolocation.abstractapi.com/v1/?api_key=5439d75ced19410c865a3d67a41f04d6'
         }
         case 'diplomados':
         {
-          return `${url}diplomados/${tag}`;
-        }
-        case 'login':
-        {
-          return `${url}sesiones/login`
-        }
-        case 'validation':
-        {
-          return `${url}sesiones/verificar`
-        }
-        case 'logout':
-        {
-          return `${url}sesiones/logout`
-        }
-        case 'signUp':
-        {
-          return `${url}sesiones/registrar`;
+            return 'https://aula.desarrolloglobal.pe/v03/api/diplomados/envivo/'+tag
         }
         case 'inHouse':
         {
-          return `${url}inhouses`;
+           return 'https://aula.desarrolloglobal.pe/v03/api/inhouses'
         }
-        case 'setProspectos':
+        case 'seminarios':
         {
-          return `${url}/inhouse/setProspecto`;
+           return `https://aula.desarrolloglobal.pe/v03/api/seminarios/${id}${limit}?offset=0` 
         }
-
-        default: return 'https://aula.desarrolloglobal.pe/v03/api/cursos/'
+  
+        default: return ''
     }
 }
