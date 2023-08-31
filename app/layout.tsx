@@ -25,14 +25,15 @@ export default async function RootLayout({
         diplomas={errD ? []:diplomas}
         >
         <body>
-          <TheMsg/>
+         {/*  <TheMsg/>
           <MobCart/>
           <MobNoti/>
           <header>
             <Navbar/>
           </header>
           <main>{children}</main>
-          <Footer />
+          <Footer /> */}
+          fsdfs
         </body>
       </GlobalContext>
     </html>
