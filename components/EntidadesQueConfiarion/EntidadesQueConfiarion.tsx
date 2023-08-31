@@ -18,7 +18,7 @@ export const EntidadesQueConfiarion = () => {
         Mas de 50 000 servidores público capacitados
       </p>
       <div className="w-[962px] max-w-[100%] px-[1rem]">
-        <Slider
+        {/* <Slider
           {...sliderOptions}
           slidesToShow={4}
           slidesToScroll={4}
@@ -42,7 +42,7 @@ export const EntidadesQueConfiarion = () => {
           {entidades.map((ent, pos) => (
             <Entidad key={pos} img={ent} />
           ))}
-        </Slider>
+        </Slider> */}
       </div>
     </>
   );
