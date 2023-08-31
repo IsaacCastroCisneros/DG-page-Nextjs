@@ -6,9 +6,9 @@ export default async function Home()
   return (
     <>
       <Carosuel/>
-      {/* <Stripe />
+      <Stripe />
       <MostrarCards program="proximos inicios" programSelector />
-      <BeneficiosDeNuestrosProgramas />
+      {/* <BeneficiosDeNuestrosProgramas />
       <CentroDeCapacitacion/>
       <CertificiacionIso/>
       <EstamosEnLinea/> */}
