@@ -3,7 +3,7 @@ import { Carosuel, BeneficiosDeNuestrosProgramas, CentroDeCapacitacion ,Certific
 import { Metadata } from "next";
 
 const title = "Centro de Capacitación y Desarrollo Global"
-const description="Desarrollo Global con mas de 12 años mejorando las competencias y capacidades de los servidores públicos y privados. Contamos con la Certificación de calidad ISO 9001-2015."
+const description="12 años mejorando las competencias y capacidades de los servidores públicos y privados. Contamos con la Certificación de calidad ISO 9001-2015."
 
 export const metadata:Metadata=
 {
