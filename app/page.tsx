@@ -17,10 +17,6 @@ export const metadata:Metadata=
   alternates:
   {
     canonical:"https://www.desarrolloglobal.pe/" ,
-    languages:
-    {
-      "es-PE":"https://www.desarrolloglobal.pe/"
-    }
   }
 }
 

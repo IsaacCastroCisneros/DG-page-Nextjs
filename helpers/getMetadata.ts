@@ -19,11 +19,5 @@ export default async function getMetadata(params:any,type:apiurl):Promise<Metada
      ...seo,
      keywords: tags,
      openGraph: { ...seo, images: data.imagen },
-     alternates: 
-     {
-       languages: {
-         "es-PE": `https://www.desarrolloglobal.pe/${type}/${name}`,
-       },
-     },
    };
 }

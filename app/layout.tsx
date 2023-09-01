@@ -19,7 +19,7 @@ export default async function RootLayout({
   const{envivo:diplomas}=resD
 
   return (
-    <html lang="en">
+    <html lang="es">
       <GlobalContext
         cursos={errC ? []:cursos}
         diplomas={errD ? []:diplomas}
