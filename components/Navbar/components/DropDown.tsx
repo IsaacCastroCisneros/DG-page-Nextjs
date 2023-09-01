@@ -40,6 +40,8 @@ export const DropDown=({label}:{label:string})=>
                     title={d.titulo}
                     date={d.inicio}
                     type={label}
+                    icon={d.icono}
+                    tag={d.etiqueta}
                   />
                 ))}
               </section>

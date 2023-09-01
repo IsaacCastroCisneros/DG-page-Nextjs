@@ -13,6 +13,14 @@ export const metadata:Metadata=
   {
     title,
     description
+  },
+  alternates:
+  {
+    canonical:"https://www.desarrolloglobal.pe/" ,
+    languages:
+    {
+      "es-PE":"https://www.desarrolloglobal.pe/"
+    }
   }
 }
 

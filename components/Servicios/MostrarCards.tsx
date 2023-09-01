@@ -3,7 +3,7 @@
 import { ReactNode, useEffect, useState } from "react"
 import program from "@/types/program"
 import { CardsGlo } from "../Cards"
-/* import { Categoria } from "@/app/components/Categoria" */
+import { Categoria } from "@/app/components/Categoria"
 import Link from "next/link"
 import getRequest from "@/helpers/getRequest"
 import apiurl from "@/types/apiUrl"
@@ -60,7 +60,7 @@ export const MostrarCards = (props:props) =>
               <h2 className="text-center font-bold text-3xl mt-16 mb-[2rem]">
                 Categoria de Programas
               </h2>
-{/*               <Categoria myProgram={myProgram} setMyProgram={setMyProgram} /> */}
+              <Categoria myProgram={myProgram} setMyProgram={setMyProgram} />
             </>
           )}
           <div className="grid w-[100%] grid-cols-[repeat(auto-fill,minmax(17.3rem,1fr))] mt-10 gap-10">

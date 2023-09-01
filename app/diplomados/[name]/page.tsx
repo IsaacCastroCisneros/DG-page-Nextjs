@@ -1,6 +1,13 @@
 import { ComponentCapacitarte, ComponentCertificacion, ComponentDocente, ComponentTestimonios, ComponentVacante, ComponentWhats, ComponentsPagos, Contenido, Header, InfoAdicional } from "@/components/ServiciosName";
 import getRequest from "@/helpers/getRequest";
 import { DiplomadosContext } from "../context/DiplomadosContext";
+import { Metadata } from "next";
+import getMetadata from "@/helpers/getMetadata";
+
+export async function generateMetadata({params}:any):Promise<Metadata>
+{
+  return await getMetadata(params,'diplomados')
+}
 
 export default async function DiplomadosNombre({params}:any) 
 {

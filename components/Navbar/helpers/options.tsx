@@ -34,7 +34,7 @@ export const options: Array<options> =
     },
     {
       label: 'blog',
-      href: '/blog'
+      href: 'https://blog.desarrolloglobal.pe/'
     },
   ]
 

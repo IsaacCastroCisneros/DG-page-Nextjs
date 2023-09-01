@@ -1,6 +1,9 @@
 "use client"
 
 import { globalContext } from "@/context/GlobalContext"
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons"
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
 import Link from "next/link"
 import { useContext } from "react"
@@ -22,7 +25,7 @@ export const CardsGlo = (props:props) =>
 
     return (
       <>
-        <div className="2xl:w-[330px] xl:w-[330px] shadow-2xl rounded-lg mx-auto">
+        <div className="w-[307px] shadow-2xl rounded-lg mx-auto">
           <div>
             <Image
               src={imagen} 
@@ -33,12 +36,12 @@ export const CardsGlo = (props:props) =>
             />
           </div>
           <div className="p-5">
-            <div className="flex gap-3">
+            <div className="flex gap-3 text-[.8rem]">
               <div className="border border-blue-500 text-blue-500 font-bold rounded-full px-3">
                 {tipo}
               </div>
-              <div className="border border-rojo text-rojo px-3 rounded-full font-bold flex items-center gap-1">
-                <i className="fi fi-ss-bullet flex"></i>En vivo
+              <div className="border border-rojo text-rojo px-3 rounded-full font-bold flex items-center gap-1 flex">
+                <span className="bg-red-500 w-[.5rem] h-[.5rem] rounded-[100%]"></span> En vivo
               </div>
             </div>
             <p className="font-medium text-xl mt-3">
@@ -80,12 +83,12 @@ export const CardsGlo = (props:props) =>
                 <p className="text-center -mt-2">Dscto</p>
               </div>
             </div>
-            <div className="flex mt-5 justify-between">
+            <div className="flex mt-5 justify-between h-[3rem]">
               <Link
                 href="google"
                 className="border border-black p-2 rounded-md flex items-center justify-between hover:bg-green-500 hover:text-white hover:border-white"
               >
-                <i className="fi fi-brands-whatsapp text-3xl flex"></i>
+                <FontAwesomeIcon icon={faWhatsapp} size="2xl" />
               </Link>
               <Link
                 href="mas"
@@ -113,7 +116,7 @@ export const CardsGlo = (props:props) =>
                   });
                 }}
               >
-                <i className="fi fi-ss-shopping-cart-add flex text-2xl"></i>
+               <FontAwesomeIcon icon={faCartShopping} size="lg" />
               </button>
             </div>
           </div>

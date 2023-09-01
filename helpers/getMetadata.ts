@@ -5,7 +5,7 @@ import { Metadata } from "next"
 
 export default async function getMetadata(params:any,type:apiurl):Promise<Metadata>
 {
-    const{name}=params
+   const{name}=params
    const {res:data} = await getRequest(type,name)
    
    const{titulo,descripcion,tags}=data.nuevo_seos
@@ -15,9 +15,15 @@ export default async function getMetadata(params:any,type:apiurl):Promise<Metada
      description: descripcion,
    };
 
-   return{
+   return {
      ...seo,
-     keywords:tags,
-     openGraph:{...seo,images:data.imagen} 
-   }
+     keywords: tags,
+     openGraph: { ...seo, images: data.imagen },
+     alternates: 
+     {
+       languages: {
+         "es-PE": `https://www.desarrolloglobal.pe/${type}/${name}`,
+       },
+     },
+   };
 }
