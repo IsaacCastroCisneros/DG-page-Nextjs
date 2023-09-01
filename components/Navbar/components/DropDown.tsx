@@ -2,7 +2,6 @@
 
 import React, { useContext } from 'react'
 import { BeneficioItem,DropDownItem } from '.';
-import { VerMasLink } from './VerMasLink';
 import Link from 'next/link';
 import { Menu,Transition } from '@headlessui/react'
 import { globalContext } from '@/context/GlobalContext';

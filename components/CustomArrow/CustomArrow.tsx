@@ -14,7 +14,7 @@ export const CustomArrow = (props:any) =>
   return (
     <div
       onClick={onClick}
-      className={`absolute hover:opacity-[.8] ${settings.direction} top-[50%] translate-y-[-50%] z-[999] text-borderGrey ${big ? 'text-[3rem]':'text-[1.8rem]'}  cursor-pointer`}
+      className={`absolute hover:opacity-[.8] ${settings.direction} top-[50%] translate-y-[-50%] z-[99] text-borderGrey ${big ? 'text-[3rem]':'text-[1.8rem]'}  cursor-pointer`}
     >
       <FontAwesomeIcon size="2xs" icon={settings.icon} />
     </div>
