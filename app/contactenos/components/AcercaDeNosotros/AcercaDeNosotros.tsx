@@ -19,7 +19,7 @@ export const AcercaDeNosotros = () =>
               src={"/img/logo-vertical-normal.webp"}
               height={200}
               width={200}
-              alt="DG-logo-vertical-normal"
+              alt="logo de desarrollo global"
             />
           </div>
           <p className="bg-myGrey block p-[48px] text-left rounded-[.5rem] flex-1">

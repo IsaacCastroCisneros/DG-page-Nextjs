@@ -11,7 +11,7 @@ export const CentroDeCapacitacion = () => {
     >
       <Image
         src={"/img/logo-nav-bar.webp"}
-        alt="DG-logo-nav-bar"
+        alt="logo de desarrollo global"
         className='mb-[1rem]'
         height={80}
         width={323}

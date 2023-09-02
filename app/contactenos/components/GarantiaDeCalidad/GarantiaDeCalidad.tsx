@@ -22,7 +22,7 @@ export const GarantiaDeCalidad = () => {
             src="/img/Certificacion.webp"
             width={300}
             height={141}
-            alt="DG-certificacion"
+            alt="certificacion iso-9001"
           />
           <button className='border-[2px] border-[#0d6efd] rounded-[2rem] px-[48px] py-[6px] bg-[#fff] text-[#0d6efd] font-bold block' >Ver Certificado ISO</button>
         </section>

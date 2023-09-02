@@ -15,7 +15,7 @@ export const ContactenosStripe = () => {
             src={"/img/logo-nav-bar.webp"}
             height={66}
             width={270}
-            alt="DG-logo-nav-bar"
+            alt="logo de desarrollo global"
           />
         </Item>
         <Item>
@@ -26,7 +26,7 @@ export const ContactenosStripe = () => {
             src={"/img/Certificacion.webp"}
             height={96}
             width={203}
-            alt="DG-logo-certificacion"
+            alt="certificado iso 9001-2015"
           />
         </Item>
       </ul>

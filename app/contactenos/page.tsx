@@ -9,7 +9,6 @@ import {
 } from ".";
 import { MyBlock } from '@/components/MyBlock/MyBlock';
 import { EntidadesQueConfiarion } from '@/components/EntidadesQueConfiarion/EntidadesQueConfiarion';
-import { Video } from '@/components/Video/Video';
 
 export default function page() {
   return (

@@ -15,22 +15,22 @@ export const ContactenosBanner = () => {
             </strong>
             <div className="grid grid-cols-[repeat(2,minmax(0,270px))] w-[100%] gap-[2rem] contactenosBanner:grid-cols-[repeat(2,1fr)] ">
               <Box
-                img={{ img: "NosoIcon1.webp", h: 54, w: 47 }}
+                img={{ img: "NosoIcon1.webp", h: 54, w: 47,alt:"icono de mano levantando el dedo" }}
                 p="Capacitando"
                 strong="+ 12 años"
               />
               <Box
-                img={{ img: "NosoIcon2.webp", h: 42, w: 67 }}
+                img={{ img: "NosoIcon2.webp", h: 42, w: 67,alt:"icono de laptop abierta" }}
                 p="Alumnos Virtuales"
                 strong="+ 7,000"
               />
               <Box
-                img={{ img: "NosoIcon3.webp", h: 53, w: 60 }}
+                img={{ img: "NosoIcon3.webp", h: 53, w: 60,alt:"icono de profesor dictando clases" }}
                 p="Alumnos Presenciales"
                 strong="+ 4,000"
               />
               <Box
-                img={{ img: "NosoIcon4.webp", h: 58, w: 40 }}
+                img={{ img: "NosoIcon4.webp", h: 58, w: 40,alt:"icono de certificado" }}
                 p="Alumnos Certificados"
                 strong="+ 14,000"
               />
@@ -42,7 +42,7 @@ export const ContactenosBanner = () => {
               width={432}
               height={476}
               className='absolute right-0 top-0'
-              alt="DG-LogoNosotros"
+              alt="hombre con traje cruzado de brazos"
             />
           </section>
         </article>
@@ -50,7 +50,7 @@ export const ContactenosBanner = () => {
     );
 }
 
-function Box({img,p,strong}:{img:{img:string,h:number,w:number},p:string,strong:string})
+function Box({img,p,strong}:{img:{img:string,h:number,w:number,alt:string},p:string,strong:string})
 {
    return (
      <div className="flex items-center contactenosBanner:justify-center gap-[1rem] flex-wrap">
@@ -58,7 +58,7 @@ function Box({img,p,strong}:{img:{img:string,h:number,w:number},p:string,strong:
          src={`/img/${img.img}`}
          height={img.h}
          width={img.w}
-         alt="DG-NosoIcon1"
+         alt={img.alt}
        />
        <section className='flex flex-col items-center'>
          <p className="text-[14px]">{p}</p>

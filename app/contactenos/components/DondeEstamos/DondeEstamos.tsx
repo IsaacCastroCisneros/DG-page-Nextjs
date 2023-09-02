@@ -37,6 +37,6 @@ export const DondeEstamos = () =>
 function Box({num}:{num:number})
 {
     return(
-        <Image src={`/img/Noso${num}.webp`}  className='w-[100%]' alt={`DG-Noso${num}`} width={640} height={249} />
+        <Image src={`/img/Noso${num}.webp`}  className='w-[100%]' alt={`personas reunidas en clases`} width={640} height={249} />
     )
 }
