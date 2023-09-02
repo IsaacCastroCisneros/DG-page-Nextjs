@@ -26,7 +26,7 @@ export const SecondBanner = () =>
       <div className='firstBanner:hidden'>
         <Image
           src="/img/hombreIndex.webp"
-          alt="DG-hombre-index"
+          alt="ejecutivo con lentes sonriendo"
           className="translate-y-[12rem]"
           width={603}
           height={633}

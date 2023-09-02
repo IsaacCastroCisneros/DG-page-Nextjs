@@ -11,14 +11,14 @@ export const FirstBanner = () => {
             className="firstBanner1:w-[200px]"
             height={73}
             width={300}
-            alt="DG-logo"
+            alt="desarrollo  global logo"
           />
           <div className="firstBanner:hidden">
             <Image
               src={"/img/Certificacion.webp"}
               height={93}
               width={203}
-              alt="DG-certificacion"
+              alt="certificacion iso 9001-2015"
             />
           </div>
         </div>
@@ -35,7 +35,7 @@ export const FirstBanner = () => {
           src={"/img/genteIndex.webp"}
           height={400}
           width={630}
-          alt="DG-gente-banner"
+          alt="ejecutivos reunidos en grupo"
         />
       </section>
     </>

@@ -7,7 +7,7 @@ export const Stripe = () =>{
             <div className="mob:w-[60px] flex justify-center">
               <Image
                 src="/img/inhouseIcon1.webp"
-                alt="Desarrollo Global"
+                alt="icono de maono apuntando con el dedo"
                 height="50"
                 width="50"
               />
@@ -21,7 +21,7 @@ export const Stripe = () =>{
             <div className="mob:w-[60px] flex justify-center">
               <Image
                 src="/img/inhouseIcon2.webp"
-                alt="Desarrollo Global"
+                alt="icono de laptop"
                 height="65"
                 width="75"
               />
@@ -35,7 +35,7 @@ export const Stripe = () =>{
             <div className="mob:w-[60px] flex justify-center">
               <Image
                 src="/img/inhouseIcon3.webp"
-                alt="Desarrollo Global"
+                alt="icono de profesor dictando clases"
                 height="60"
                 width="60"
               />
@@ -49,7 +49,7 @@ export const Stripe = () =>{
             <div className="mob:w-[60px] flex justify-center">
               <Image
                 src="/img/inhouseIcon4.webp"
-                alt="Desarrollo Global"
+                alt="icono de certificacion"
                 height="40"
                 width="40"
               />

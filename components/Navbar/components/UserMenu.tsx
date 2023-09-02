@@ -20,7 +20,7 @@ export const UserMenu = () =>
         <Image
           src={"/img/avatar_25533.webp"}
           className="rounded-[100%] mr-[1rem] nav-bar:hidden"
-          alt="DG-avatar"
+          alt="avatar de usuario"
           height={50}
           width={50}
         />
@@ -29,7 +29,7 @@ export const UserMenu = () =>
           <Image
             src={"/img/avatar_25533.webp"}
             className="rounded-[100%] h-[45px] w-[45px] hidden nav-bar:block"
-            alt="DG-avatar"
+            alt="avatar de usuario"
             height={50}
             width={50}
           />

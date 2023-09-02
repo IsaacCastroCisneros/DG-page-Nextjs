@@ -62,24 +62,28 @@ export const DropDown=({label}:{label:string})=>
               img="https://nuevapagina.s3.amazonaws.com/IconLiveDiploma.webp"
               color="text-red-500"
               label="Clases en Vivo"
+              alt="icono de transmision en vivo"
             />
             <BeneficioItem
               img="https://nuevapagina.s3.amazonaws.com/IconMenu2.webp"
               color="text-yellow-500"
               label="Certificación Universitaria"
+              alt="icono de certificado"
             />
             <BeneficioItem
               img="https://nuevapagina.s3.amazonaws.com/IconMenu3.webp"
               color="text-green-500"
               label="Garantía de Calidad"
+              alt="icono de garantia"
             />
             <BeneficioItem
               img="https://nuevapagina.s3.amazonaws.com/IconMenu4.webp"
               color="text-blue-500"
               label="Plataforma Premium"
+              alt="icono de laptop"
             />
             <p className="uppercase text-blue-500 block text-center">
-              TODAS NUESTRAS CURSOS TIENES MAS SESIONES
+              TODAS NUESTROS CURSOS TIENES MAS SESIONES
             </p>
             <p className="block text-center">Te damos mas por tu dinero</p>
           </section>

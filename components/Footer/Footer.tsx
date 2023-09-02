@@ -16,7 +16,7 @@ export const Footer = () =>
               src={"/img/logo-nav-bar.webp"}
               width={200}
               height={49.39}
-              alt="DG-logo"
+              alt="logo de desarrollo global"
               className="mb-[1.5rem]"
             />
             <p className="">

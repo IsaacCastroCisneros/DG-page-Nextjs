@@ -24,7 +24,7 @@ export const Navbar = () =>
           src={"/DG-Logotipo_Color.webp"}
           width={180}
           height={44}
-          alt="DG-logo"
+          alt="logo de desarrollo global"
           className="mr-[2rem]"
         />
       </Link>

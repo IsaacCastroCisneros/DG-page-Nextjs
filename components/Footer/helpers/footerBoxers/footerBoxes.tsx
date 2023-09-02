@@ -33,7 +33,7 @@ const footerBoxers: Array<footerBox> = [
       <p>
       COD N°. CO18.00048/U
       </p>
-      <Image src="/img/Iso9001.webp" width={150} height={95} alt="DG-Iso" />
+      <Image src="/img/Iso9001.webp" width={150} height={95} alt="certifacion iso 9001" />
     </>
   },
   {

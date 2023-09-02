@@ -9,7 +9,7 @@ export const CertificacionIsoBox = ({styles}:{styles?:string}) => {
       src="/img/Iso9001.webp"
       height={132.5}
       width={207.99}
-      alt="DG-iso"
+      alt="certificacion iso 9001"
     />
     <section className="flex flex-col gap-[.3rem] flex-1">
       <strong className="mb-[.2rem] text-[30px] leading-[2.5rem] text-slate-900">

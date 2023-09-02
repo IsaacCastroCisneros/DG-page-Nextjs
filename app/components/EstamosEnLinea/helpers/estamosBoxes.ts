@@ -1,8 +1,9 @@
 import estamosBox from "../interfaces/estamosBox";
 
-const estamosBoxes: Array<estamosBox> = [
+const estamosBoxes: Array<estamosBox> = 
+[
   {
-    img: { src: "/img/IconHombreLapto.webp", h: 63.81, w: 98 },
+    img: { src: "/img/IconHombreLapto.webp", h: 63.81, w: 98 ,alt:"persona usando laptop"},
     title: "¿Ya eres alumno?",
     decription:
       "Consulta con atención al alumno el estado de tus notas y certificaciones.",
@@ -16,7 +17,7 @@ const estamosBoxes: Array<estamosBox> = [
     },
   },
   {
-    img: { src: "/img/IconCursos.webp", h: 70.52, w: 322.67 },
+    img: { src: "/img/IconCursos.webp", h: 70.52, w: 322.67 ,alt:"iconos de programas"},
     title: "Información de programas",
     decription:
       "Quieres información de algún curso, diploma o diplomado contáctanos aquí.",
@@ -29,7 +30,7 @@ const estamosBoxes: Array<estamosBox> = [
     },
   },
   {
-    img: { src: "/img/IconGrupo.webp", h: 88.7, w: 87.17 },
+    img: { src: "/img/IconGrupo.webp", h: 88.7, w: 87.17,alt:"personas reunidas en una mesa"},
     title: "Cursos In House",
     decription:
       "Puedes solicitar cualquiera de nuestros programas para que sean dictados en su ENTIDAD / INSTITUCIÓN.",

@@ -45,7 +45,7 @@ export const MostrarCards = (props:props) =>
     },[myProgram])
 
     return (
-      <section>
+      <section className="pb-[.5rem]">
         <article className="container mx-auto flex flex-col items-center">
           {!programSelector && (
             <>

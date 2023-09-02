@@ -1,6 +1,6 @@
 export default interface estamosBox
 {
-    img:{src:string,h:number,w:number},
+    img:{src:string,h:number,w:number,alt:string},
     title:string,
     decription:string,
     num:string,

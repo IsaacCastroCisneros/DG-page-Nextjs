@@ -14,14 +14,14 @@ export const NavbarForm = ({type}:{type:Mytype}) =>
           src="/img/nuevo_logo_blanco.webp"
           width={180}
           height={50}
-          alt="DG-logo"
+          alt="desarrollo global logo"
           className="mb-[48px]"
         />
         <Image
           src="/img/LoginRegistro.webp"
           width={485}
           height={238}
-          alt="DG-LoginRegistro"
+          alt="ejecutiva escribiendo en pizarra"
           className="mb-[1.5rem]"
         />
         <p className="text-[24px] text-[#fff]">
