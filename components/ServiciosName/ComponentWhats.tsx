@@ -1,7 +1,15 @@
+import { programContext } from '@/app/context/ProgramContext';
+import { globalContext } from '@/context/GlobalContext';
+import programData from '@/types/programData';
 import Image from 'next/image';
-export const ComponentWhats = () => {
+import { useContext } from 'react';
+export const ComponentWhats = () => 
+{
+    const{program}=useContext(programContext)
+    const{asesores}=program as programData
+
     return (
-        <section className="bg-[#00c9a2]">
+        <section className="bg-[#00c9a2] py-[1.5rem] px-[1rem]">
             <article className="container mx-auto">
                 <div className='w-full lg:w-[70%]'>
                     <p className="text-white font-bold text-3xl">✍Hablemos por Whatsapp</p>
@@ -23,3 +31,4 @@ export const ComponentWhats = () => {
         </section>
     )
 }
+

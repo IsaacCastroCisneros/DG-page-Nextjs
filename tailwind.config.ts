@@ -52,6 +52,8 @@ const config: Config = {
         "listaDeProgramas": { max: "999px" },
         "listaDeProgramas1": { max: "500px" },
         "myButtons": { max: "655px" },
+        "800px":{max:"800px"},
+        "1000px":{max:"1000px"},
         "soliciteUna": { max: "1285px" },
         "soliciteUna1": { max: "723px" },
         "mob": { max: "500px" },
@@ -62,7 +64,7 @@ const config: Config = {
         "nosotros":{max:"729px"},
         "garantia":{max:"708px"},
         "dondeEstamos":{max:"541px"},
-        "login":{max:"1076px"}
+        "login":{max:"1076px"},
       },
     },
   },

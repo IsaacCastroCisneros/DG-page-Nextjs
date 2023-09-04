@@ -15,44 +15,47 @@ export const ComponentDocente = () =>
     const{program}=useContext(programContext)
     const{profesores}=program as programData
 
+
     return (
-        <section className='py-[1rem]'>
-            <article className="mx-auto container">
-                <div className="font-bold p-5 w-full lg:w-[70%] xl:w-[70%] 2xl:w-[70%]">
-                    <p className="text-center text-4xl">Profesores</p>
-                    <p className="text-center text-lg">Profesionales con amplia experiencia en la Gestión Pública</p>
-                    <Slider {...sliderOptions}
-                       slidesToShow={3}
-                       slidesToScroll={3}
-                       responsive={[
-                         {
-                           breakpoint: 900,
-                           settings: {
-                             slidesToShow: 2,
-                             slidesToScroll: 2,
-                           },
-                         },
-                         {
-                           breakpoint: 640,
-                           settings: {
-                             slidesToShow: 1,
-                             slidesToScroll: 1,
-                           },
-                         },
-                       ]}
-                     >
-                       {
-                         profesores.map((profesor,pos)=>
-                            (
-                                <Card key={pos} profesor={profesor}/>
-                            ))
-                       }
-                    </Slider>
-                    <p className='text-rojo font-bold text-center text-xl mt-10'>*Segun disponibilidad de los docentes</p>
-                </div>
-            </article>
-        </section>
-    )
+      <section className="py-[1rem]">
+        <article className="mx-auto container">
+          <div className="font-bold p-5 w-full lg:w-[70%] xl:w-[70%] 2xl:w-[70%]">
+            <p className="text-center text-4xl">Profesores</p>
+            <p className="text-center text-lg">
+              Profesionales con amplia experiencia en la Gestión Pública
+            </p>
+            <Slider
+              {...sliderOptions}
+              slidesToShow={profesores.length < 3 ? profesores.length : 3}
+              slidesToScroll={profesores.length < 3 ? profesores.length : 3}
+              responsive={[
+                {
+                  breakpoint: 900,
+                  settings: {
+                    slidesToShow: profesores.length < 2 ? 1 : 2,
+                    slidesToScroll: profesores.length < 2 ? 1 : 2,
+                  },
+                },
+                {
+                  breakpoint: 640,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                  },
+                },
+              ]}
+            >
+              {profesores.map((profesor, pos) => (
+                <Card key={pos} profesor={profesor} />
+              ))}
+            </Slider>
+            <p className="text-rojo font-bold text-center text-xl mt-10">
+              *Segun disponibilidad de los docentes
+            </p>
+          </div>
+        </article>
+      </section>
+    );
 }
 
 function Card({profesor}:any )
@@ -82,14 +85,13 @@ function Card({profesor}:any )
         setIsOpen={setShow}
         isOpen={show}
         popUp={
-          <div className='p-[1.5rem] bg-white flex gap-[2rem] max-w-[70rem]'>
+          <div className='p-[1.5rem] bg-white flex gap-[2rem] max-w-[70rem] 800px:flex-col 800px:items-center'>
             <Image width={90} height={80} className='min-w-[20rem]' alt='avatar de profesor' src={profesor.avatar}/>
-            <section className='flex flex-col flex-1'>
+            <section className='flex flex-col flex-1 800px:items-center'>
                 <strong className='text-[1.5rem]' >{profesor.nombre}</strong>
                 <strong>{profesor.profesion}</strong>
-                <p className='mt-[1rem]'>
-                    {profesor.descripcion}
-                </p>
+                <div className='mt-[1rem]' dangerouslySetInnerHTML={{__html:profesor.descripcion}} >
+                </div>
             </section>
           </div>
         }
