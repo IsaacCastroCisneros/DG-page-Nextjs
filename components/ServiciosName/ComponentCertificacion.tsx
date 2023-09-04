@@ -1,16 +1,34 @@
+"use client"
+
+import { programContext } from '@/app/context/ProgramContext';
+import programData from '@/types/programData';
 import Image from 'next/image';
-export const ComponentCertificacion = () => {
+import { useContext } from 'react';
+
+export const ComponentCertificacion = () => 
+{
+    const{program}=useContext(programContext)
+    const{tipo}=program as programData
+
     return (
-        <section className="bg-[#B8D7FE]">
+        <section className="bg-[#B8D7FE] py-[1.3rem]">
             <article className="container mx-auto">
                 <div className="w-full lg:w-[70%] xl:w-[70%] 2xl:w-[70%] p-5">
-                    <p className="text-3xl font-bold">Certificacion Universitaria</p>
+                    <p className="text-3xl font-bold mob:text-center">Certificacion Desarrollo Global</p>
                     <div className="bg-white rounded-md p-10 mt-10 shadow-lg font-bold">
                         <p>👉 Válido para postular a convocatorias Públicas y Privadas</p>
-                        <p className="w-full lg:w-[60%] xl:w-[60%] 2xl:w-[60%]">Los Certificados son válidos y aceptados por instituciones públicas, de acuerdo a la Normativa Nº141-2016-SERVIR-PE.</p>
-                        <p className="flex items-center gap-3 mt-5"><i className="fi fi-rr-checkbox text-green-500 flex text-2xl font-black"></i>Certificado por Curso</p>
+                        <p className="w-full">Los Certificados son válidos y aceptados por instituciones públicas, de acuerdo a la Normativa Nº141-2016-SERVIR-PE.</p>
                     </div>
-                    <Image src="/img/certiCursoForReal.webp" width="768" height="465" alt='Certificacion Unniversitaria' className='mx-auto mt-5' />
+                    <div className='my-shadow w-fit mx-auto'>
+                    {
+                       tipo==="curso"&&
+                       <Image src="/img/curdip.webp" width="768" height="465" alt='Certificacion Unniversitaria' className='mx-auto mt-5' />
+                    }
+                    {
+                       tipo!=="curso"&&
+                       <Image src="/img/dipdip.webp" width="768" height="465" alt='Certificacion Unniversitaria' className='mx-auto mt-5' />
+                    }
+                    </div>
                 </div>
             </article>
         </section>

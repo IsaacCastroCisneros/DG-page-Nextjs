@@ -72,7 +72,7 @@ export const Header = () =>
     return (
       <section className="bg-gradient-to-b from-[#4605fa] via-[#865dfb] to-[#865dfb]">
         {!prueba && <ContadorHeader />}
-        <article className="container flex mx-auto p-10 flex-wrap">
+        <article className="container flex mx-auto p-10 mob:px-[1rem] flex-wrap">
           <div className="w-full lg:w-[70%] xl:w-[70%] 2xl:w-[70%]">
             <div className="w-full lg:w-[80%] xl:w-[80%] 2xl:w-[80%] space-y-4">
               <h1 className="text-[#ffb300] font-bold text-xl capitalize">
@@ -83,7 +83,7 @@ export const Header = () =>
               <Calificaciones tipo="header" />
             </div>
           </div>
-          <div className="w-full lg:w-[30%] relative lg:static lg:px-14 z-[999]">
+          <div className="w-full lg:w-[30%] relative lg:static lg:px-14 z-[999] mob:mt-[1rem]">
             <div
               className={`w-[320px] mx-auto bg-white rounded-lg block lg:fixed shadow-lg transition-all ease-in-out duration-300 ${
                 !prueba && "lg:-mt-24"

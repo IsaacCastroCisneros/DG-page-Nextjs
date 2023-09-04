@@ -18,7 +18,7 @@ export const MobNoti = () =>
 
   return (
     <div
-      className={`fixed right-[1rem] top-[8rem] z-[999] hidden ${
+      className={`fixed right-[1rem] top-[8rem] z-[9999] hidden ${
         noti.length > 0 ? "nav-bar:block" : ""
       }`}
     >

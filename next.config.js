@@ -9,7 +9,8 @@ const nextConfig = { experimental: {
       "s3-us-west-2.amazonaws.com",
       "s3.amazonaws.com",
       "archivos-comunes.s3.amazonaws.com",
-      "images.unsplash.com"
+      "images.unsplash.com",
+      "aula.desarrolloglobal.pe"
     ],
   },}
 

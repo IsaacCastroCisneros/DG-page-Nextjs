@@ -15,7 +15,7 @@ export const MobCart = () =>
 
   return (
     <div
-      className={`fixed right-[1rem] top-[4.2rem] z-[999] hidden ${
+      className={`fixed right-[1rem] top-[4.2rem] z-[9999] hidden ${
         cart.length > 0 ? "nav-bar:block" : ""
       }`}
     >

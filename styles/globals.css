@@ -7,6 +7,11 @@ body {
    overflow-x: hidden;
 }
 
+.my-shadow
+{
+   box-shadow: 0rem 0rem .3rem 0rem #949494;
+}
+
 .listing-container li
 {
   list-style: disc;

@@ -8,13 +8,13 @@ export const CustomArrow = (props:any) =>
 
   let settings:{icon:IconProp,direction:string}={icon:faChevronRight,direction:''} 
 
-  if(direction==='left') settings={icon:faChevronLeft,direction:`left-0 ${inside ? 'translate-x-[3.8rem]':'translate-x-[-3.8rem]'}`}
-  if(direction==='rite') settings={...settings,direction:`right-0 ${inside ? 'translate-x-[-3.8rem]':'translate-x-[3.8rem]'}`}
+  if(direction==='left') settings={icon:faChevronLeft,direction:`left-0 ${inside ? 'translate-x-[3.8rem]':'translate-x-[-1.8rem]'}`}
+  if(direction==='rite') settings={...settings,direction:`right-0 ${inside ? 'translate-x-[-3.8rem]':'translate-x-[1.8rem]'}`}
 
   return (
     <div
       onClick={onClick}
-      className={`absolute hover:opacity-[.8] ${settings.direction} top-[50%] translate-y-[-50%] z-[99] text-borderGrey ${big ? 'text-[3rem]':'text-[1.8rem]'}  cursor-pointer`}
+      className={`absolute hover:opacity-[.8] ${settings.direction} estamosEnLinea:hidden top-[50%]  translate-y-[-50%] z-[99] text-borderGrey ${big ? 'text-[3rem]':'text-[1.8rem]'}  cursor-pointer`}
     >
       <FontAwesomeIcon size="2xs" icon={settings.icon} />
     </div>
