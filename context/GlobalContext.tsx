@@ -32,7 +32,7 @@ interface values {
 interface msg
 {
   show:boolean,
-  type?:string,
+  type?:'fail'|'success'|'alert',
   content?:string,
 }
 
@@ -48,7 +48,7 @@ export const GlobalContext = ({ children, cursos, diplomas }: props) =>
   const [cart, setCart] = useState<Array<cartItem>>([]);
   const [showMsg, setShowMsg] = useState<msg>({
     show: false,
-    type: "",
+    type: "fail",
     content: "",
   });
   const [user, setUser] = useState<user | undefined>(undefined);

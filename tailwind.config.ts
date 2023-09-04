@@ -28,7 +28,8 @@ const config: Config = {
         myLightPurple:"#321cac",
         myGrey:"#c2c8f9",
         myLightBlue:"#0d6efd",
-        shadow:"#a6a5a2"
+        shadow:"#a6a5a2",
+        myBlue1:"#0017eb"
       },
       screens: {
         "nav-bar": { max: "1267px" },

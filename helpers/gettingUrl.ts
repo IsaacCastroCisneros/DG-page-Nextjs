@@ -1,7 +1,8 @@
 import apiurl from "@/types/apiUrl";
 
-export default function gettingUrl(type:apiurl,tag:string="")
+export default function gettingUrl(type:apiurl,tag:string="",prospecto:boolean=false)
 {
+    const url ="https://aula.desarrolloglobal.pe/v03/api/"
 
     switch(type)
     {
@@ -15,10 +16,18 @@ export default function gettingUrl(type:apiurl,tag:string="")
         }
         case 'cursos':
         {
+            if(prospecto)
+            {
+               return `https://aula.desarrolloglobal.pe/v03/api/${type}/setProspecto` 
+            }
             return 'https://aula.desarrolloglobal.pe/v03/api/cursos/envivo/'+tag
         }
         case 'geo':
         {
+            if(prospecto)
+            {
+               return `https://aula.desarrolloglobal.pe/v03/api/${type}/setProspecto` 
+            }
             return 'https://ipgeolocation.abstractapi.com/v1/?api_key=5439d75ced19410c865a3d67a41f04d6'
         }
         case 'diplomados':
@@ -29,6 +38,22 @@ export default function gettingUrl(type:apiurl,tag:string="")
         {
            return 'https://aula.desarrolloglobal.pe/v03/api/inhouses'
         }
+        case 'login':
+            {
+              return `${url}sesiones/login`
+            }
+            case 'validation':
+            {
+              return `${url}sesiones/verificar`;
+            }
+            case 'logout':
+            {
+              return `${url}sesiones/logout`;
+            }
+            case 'signUp':
+            {
+              return `${url}sesiones/registrar`;
+            }
        /*  case 'seminarios':
         {
            return `https://aula.desarrolloglobal.pe/v03/api/seminarios/${id}${limit}?offset=0` 

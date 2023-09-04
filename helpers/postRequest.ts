@@ -1,9 +1,9 @@
 import apiurl from "@/types/apiUrl"
 import gettingUrl from "./gettingUrl"
 
-export default async function postRequest(type:apiurl,data:FormData)
+export default async function postRequest(type:apiurl,data:FormData,prospecto:boolean=false)
 {
-  const url =gettingUrl(type)
+  const url =gettingUrl(type,'',prospecto)
 
   try
   {

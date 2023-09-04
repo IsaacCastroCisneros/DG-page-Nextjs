@@ -3,6 +3,8 @@ import getRequest from "@/helpers/getRequest";
 import { DiplomasContext } from "../context/DiplomasContext";
 import getMetadata from "@/helpers/getMetadata";
 import { Metadata } from "next";
+import { ProgramContext } from "@/app/context/ProgramContext";
+import diplomas from "@/interfaces/diplomas";
 
 export async function generateMetadata({params}:any):Promise<Metadata>
 {
@@ -14,13 +16,17 @@ export default async function DriplomasName({params}:any)
     const{name}=params
     const{res:diplomas,err}=await getRequest('diplomas',name)
 
+    const{cursos}=diplomas as diplomas
+
+    if(err)return <div className="capitalize font-bold text-[2rem] text-center">an error was occurred</div> 
+
     return (
-        <DiplomasContext
-         diplomas={err ? []:diplomas}
+        <ProgramContext
+         program={diplomas}
          >
             <Header />
             <InfoAdicional />
-            <Contenido />
+            <Contenido data={cursos} />
             <ComponentCertificacion />
             <ComponentDocente />
             <ComponentCapacitarte />
@@ -28,6 +34,6 @@ export default async function DriplomasName({params}:any)
             <ComponentWhats />
             <ComponentTestimonios />
             <ComponentVacante />
-        </DiplomasContext>
+        </ProgramContext>
     )
 }

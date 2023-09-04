@@ -7,6 +7,21 @@ body {
    overflow-x: hidden;
 }
 
+.listing-container li
+{
+  list-style: disc;
+  padding-left: 0px;
+}
+
+.listing-container ul
+{
+  padding-left: 40px;
+}
+.listing-container strong
+{
+  padding-left: 0px;
+}
+
 .my-container {
    max-width: 100%;
    margin: 0 auto;
