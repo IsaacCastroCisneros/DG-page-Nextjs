@@ -5,10 +5,12 @@ import { AcercaDeNosotros, BeneficiosDeLa, InHouseBanner, InHouseCard,ListaDePro
 import { LastBlock } from './components/LastBlock/LastBlock';
 import getRequest from '@/helpers/getRequest';
 import { InHouseContext } from './context/InHouseContext';
+import inHouse from '@/interfaces/inHouse';
 
 export default async function page() 
 {
   const {res:inHouses,err} = await getRequest('inHouse')
+  const myInHouses= inHouses as  Array<inHouse>
 
   return (
     <InHouseContext
@@ -27,7 +29,7 @@ export default async function page()
         footer={<MyButtons />}
       >
         {
-          inHouses.map((item:any)=>
+          myInHouses.map((item)=>
             (
               <InHouseCard key={item.id} {...item} />
             ))

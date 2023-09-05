@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ProgramaInHouse,ProgramaInHouseForm } from '.';
+import inHouseCardContext from '../context/inHouseCardContext';
 
 export const ProgramaInHousePopUp = () => 
 {
+  const{titulo}=useContext(inHouseCardContext)
+
   return (
     <div className="flex">
       <section className="w-[581px] p-[48px] bg-[#04a5e2] popUp:hidden">
@@ -13,7 +16,7 @@ export const ProgramaInHousePopUp = () =>
           className="mb-[1rem]"
           width={180}
           height={50.25}
-          alt="DG-logo"
+          alt="logo de desarrollog global"
         />
         <div className="flex items-start mb-[1rem]">
           <Image
@@ -21,19 +24,21 @@ export const ProgramaInHousePopUp = () =>
             className="rounded-[.5rem]"
             width={300}
             height={263}
-            alt="DG-InHoueInf"
+            alt="chica usando computadora"
           />
           <Image
             src="/img/FechaInHouse.webp"
             width={150}
             height={134}
-            alt="DG-Flecha"
+            alt="flecha señalando"
             className="flex-1"
           />
         </div>
         <ProgramaInHouse />
         <p className="text-[24px] uppercase text-[#fff] block my-[.5rem]">
-          my tittle lmaaao
+          {
+            titulo
+          }
         </p>
         <div className="flex gap-[.5rem]">
           <Link
@@ -44,7 +49,7 @@ export const ProgramaInHousePopUp = () =>
               src={"/img/iconEmail.webp"}
               width={20}
               height={16}
-              alt="DG-mail"
+              alt="icono email"
             />
             asesoria@desarrolloglobal.pe
           </Link>
@@ -57,7 +62,7 @@ export const ProgramaInHousePopUp = () =>
               src={"/img/iconWhatWhite.webp"}
               width={25}
               height={25}
-              alt="DG-WP"
+              alt="icono whatsapp"
             />
             Solicitar por whatsapp
           </Link>

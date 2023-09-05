@@ -111,7 +111,7 @@ export const MostrarCards = (props:props) =>
               <Categoria myProgram={myProgram} setMyProgram={setMyProgram} />
             </>
           )}
-          <div className="grid w-[100%] grid-cols-[repeat(auto-fill,minmax(17.3rem,1fr))] mt-10 gap-10">
+          <div className="grid w-[100%] grid-cols-[repeat(auto-fill,minmax(17.3rem,1fr))] mt-10 gap-[.8rem]">
             {!children && data && !loading && (
               <>
                 {data.map((d: any) => (
