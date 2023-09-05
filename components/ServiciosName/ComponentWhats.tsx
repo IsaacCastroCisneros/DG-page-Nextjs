@@ -1,3 +1,5 @@
+"use client"
+
 import { programContext } from '@/app/context/ProgramContext';
 import { globalContext } from '@/context/GlobalContext';
 import programData from '@/types/programData';
