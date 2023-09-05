@@ -17,6 +17,8 @@ interface props
   footer?:ReactNode
 }
 
+
+
 export const MostrarCards = (props:props) => 
 {
     const {
@@ -32,20 +34,66 @@ export const MostrarCards = (props:props) =>
 
     const [myProgram, setMyProgram] = useState<program>(program); 
     const[data,setData]=useState<any>() 
+    const [all, setAll] = useState<{
+      poximosInicios: Array<Record<any, any>>;
+      diplomas: Array<Record<any, any>>;
+      cursos: Array<Record<any, any>>;
+      diplomados: Array<Record<any, any>>;
+    }>({ poximosInicios: [], diplomas: [], cursos: [], diplomados: [] });
+    const[loading,setLoading]=useState<boolean>(false)
 
     useEffect(()=>
     {
       async function myGetting()
       {
-        const {res,err} =await getRequest(myProgram as apiurl) ; 
-        if(err)return
-        setData(res.envivo) 
+        setLoading(true)
+        const {res:cursos} =await getRequest('cursos') ; 
+        const {res:diplomas} =await getRequest('diplomas') ; 
+        const {res:diplomados} =await getRequest('diplomados') ; 
+
+        const proximos = [...cursos.envivo, ...diplomas.envivo,...diplomados.envivo]
+
+        let poximosInicios = proximos.sort(
+        (a, b) => new Date(a.inicio).getTime() - new Date(b.inicio).getTime());
+        setAll({
+          poximosInicios,
+          cursos: cursos.envivo,
+          diplomados: diplomados.envivo,
+          diplomas: diplomas.envivo,
+        });
+        setData(poximosInicios)
+        setLoading(false);
       }
       myGetting()
+    },[])
+
+    useEffect(()=>
+    {
+      if(myProgram==="proximos inicios")
+      {
+        setData(all.poximosInicios||[])
+      }
+      if(myProgram==="cursos")
+      {
+        setData(all.cursos||[])
+      }
+      if(myProgram==="diplomas")
+      {
+
+        setData(all.diplomas||[])
+      }
+      if(myProgram==="diplomados")
+      {
+
+        setData(all.diplomados||[])
+      }
+
     },[myProgram])
 
+
+
     return (
-      <section className="pb-[.5rem]">
+      <section className="pb-[1.5rem]">
         <article className="container mx-auto flex flex-col items-center">
           {!programSelector && (
             <>
@@ -64,7 +112,7 @@ export const MostrarCards = (props:props) =>
             </>
           )}
           <div className="grid w-[100%] grid-cols-[repeat(auto-fill,minmax(17.3rem,1fr))] mt-10 gap-10">
-            {!children && data && (
+            {!children && data && !loading && (
               <>
                 {data.map((d: any) => (
                   <CardsGlo key={d.id} {...d} />
@@ -73,15 +121,7 @@ export const MostrarCards = (props:props) =>
             )}
             {children && children}
           </div>
-          {myProgram !== "proximos inicios" && programSelector && (
-            <Link
-              href={`/${myProgram}`}
-              className="bg-myBlue mt-[2rem] mx-auto my-0 transition-all duration-200 hover:bg-myBlueDark text-[#fff] rounded-[.5rem] font-bold py-[.6rem] px-[.8rem]"
-            >
-              {" "}
-              Ver más <span className="capitalize">{myProgram}</span>
-            </Link>
-          )}
+          {loading && <div className="text-center font-bold text-[1.5rem]">Cargando...</div>}
           {footer}
         </article>
       </section>
