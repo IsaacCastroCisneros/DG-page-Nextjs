@@ -7,7 +7,7 @@ export const BeneficiosDeNuestrosProgramas = () =>
 {
   return (
     <MyBlock styles={{ container: "bg-primary" }}>
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(25rem,1fr))] beneficios:grid-cols-[repeat(auto-fill,minmax(15rem,1fr))] gap-[1rem] beneficios1:gap-[2rem] text-left">
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(25rem,1fr))] container beneficios:grid-cols-[repeat(auto-fill,minmax(15rem,1fr))] gap-[1rem] beneficios1:gap-[2rem] text-left">
         <MyFirstBox />
         {boxes.map((box, pos) => (
           <Box key={pos} {...box} />

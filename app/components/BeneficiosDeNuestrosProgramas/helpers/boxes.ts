@@ -15,7 +15,7 @@ export const boxes:Array<box>=
     alt:"icono de laptop"
   },
   {
-    title:"Certificación Universitaria",
+    title:"Certificación Desarrollo Global",
     desciption:"Descarga de certificación digital, el recojo en oficina del físico es opcional luego de aprobar las evaluaciones.",
     img:"/img/UniBene.webp",
     alt:"icono de certificacion"
