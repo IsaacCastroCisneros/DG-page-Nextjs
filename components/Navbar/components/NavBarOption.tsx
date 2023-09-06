@@ -11,7 +11,7 @@ export const NavBarOption=({href,label,icon}:options)=>
     <Menu>
       {() => (
         <>
-          <li className="relative z-[99]">
+          <li className="relative">
             {href && (
               <Link href={href}>
                 <Label>{label}</Label>

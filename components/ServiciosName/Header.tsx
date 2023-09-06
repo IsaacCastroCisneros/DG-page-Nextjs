@@ -13,9 +13,9 @@ import { faCartShopping, faPen } from '@fortawesome/free-solid-svg-icons';
 import postRequest from '@/helpers/postRequest';
 import { usePathname } from 'next/navigation'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import Link from 'next/link';
 import { programContext } from '@/app/context/ProgramContext';
 import programData from '@/types/programData';
+import useCart from '@/hooks/useCart';
 
 
 export const Header = () => 
@@ -23,6 +23,7 @@ export const Header = () =>
     const {program} =useContext(programContext)
     const{setShowMsg}=useContext(globalContext)
     const{user}=useContext(globalContext)
+    const{updatingCart}=useCart()
     
     const{titulo,tipo,descripcion,imagen,precio,id,asesores}=program as programData
 
@@ -36,6 +37,7 @@ export const Header = () =>
     })
 
     const [prueba, setPrueba] = useState<boolean>(true)
+
 
     useEffect(() => {
         const intersector: NodeListOf<Element> = document.querySelectorAll("#intersector");
@@ -186,7 +188,7 @@ export const Header = () =>
                       <strong className='text-[1.5rem]'>WHATSAPP</strong>
                     </div>
                   </a>
-                  <button className='flex gap-[1rem] justify-center bg-myBlue1 text-white items-center px-[1rem] py-[.8rem] w-full rounded-md mt-[.5rem]'>
+                  <button onClick={()=>updatingCart({id,titulo,precio,imagen})} className='flex gap-[1rem] justify-center bg-myBlue1 text-white items-center px-[1rem] py-[.8rem] w-full rounded-md mt-[.5rem]'>
                     <FontAwesomeIcon size='xl'  icon={faCartShopping}/>
                     <strong className='capitalize' >agregar al carrtio</strong>
                   </button>

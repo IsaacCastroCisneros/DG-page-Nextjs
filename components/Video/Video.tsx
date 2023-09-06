@@ -1,6 +1,8 @@
 "use client"
 
 import React, { VideoHTMLAttributes, useEffect, useRef } from 'react'
+import Plyr from "plyr";
+import { twMerge } from 'tailwind-merge';
 
 interface videoProps extends VideoHTMLAttributes<HTMLVideoElement> 
 {
@@ -17,7 +19,7 @@ interface props
 
 export const Video = (props:props) => 
 {
-   /*  const videoRef = useRef<HTMLVideoElement>(null);
+    const videoRef = useRef<HTMLVideoElement>(null);
     const {
       style,
       res = 720,
@@ -44,11 +46,11 @@ export const Video = (props:props) =>
     const myVideoProps: videoProps = {
       loading: "lazy",
       style,
-    }; */
+    };
 
-    return null /* (
-      <div className={`w-[calc(648px_+_2rem)] max-w-[100%] ${styles}`} >
+    return  (
+      <div className={twMerge('w-[100%]',styles)} >
         <video {...myVideoProps} ref={videoRef} ></video>
       </div>
-    ); */
+    );
 }

@@ -5,12 +5,17 @@ import Image from 'next/image';
 import { useContext, useState } from 'react';
 import { MyPopUp } from '../MyPopUp/MyPopUp';
 import { globalContext } from '@/context/GlobalContext';
+import useCart from '@/hooks/useCart';
+import { programContext } from '@/app/context/ProgramContext';
+import programData from '@/types/programData';
 
 
 export const ComponentsPagos = () => 
 {
     const[show,setShow]=useState<boolean>(false)
-    
+    const{program}=useContext(programContext)
+    const{id,titulo,imagen,precio}=program as programData
+    const{updatingCart}=useCart()
 
     return (
       <>
@@ -252,9 +257,9 @@ export const ComponentsPagos = () =>
                     </p>
                   </div>
                   <div>
-                    <button className="text-white bg-blue-500 flex items-center text-lg font-bold justify-center gap-3 rounded-md w-full lg:w-[246px] py-3">
+                    <button onClick={()=>updatingCart({id,precio,imagen,titulo})}  className="text-white bg-blue-500 flex items-center text-lg font-bold justify-center gap-3 rounded-md w-full lg:w-[246px] py-3">
                       <FontAwesomeIcon icon={faShoppingCart} />
-                      En el Carrito
+                      Agregar al Carrito
                     </button>
                     <Image
                       src="/img/icons/IconTarjetas.webp"

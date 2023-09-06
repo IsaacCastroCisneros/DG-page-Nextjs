@@ -9,7 +9,7 @@ export const MyPopUp = ({isOpen,setIsOpen,popUp}:{popUp:ReactNode,isOpen:boolean
       <>
         <Transition show={isOpen} as={Fragment}>
           <Dialog
-            className="fixed inset-0 z-[999] overflow-y-auto"
+            className="fixed inset-0 z-[9999999] overflow-y-auto"
             onClose={() => setIsOpen(false)}
           >
             <div className="min-h-screen px-[.8rem] flex items-center justify-center">

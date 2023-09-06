@@ -29,7 +29,7 @@ export const Navbar = () =>
         />
       </Link>
       <NavbarOptionList options={options} />
-      <div className="ml-auto flex items-center gap-[1rem] z-[999] w-fit">
+      <div className="ml-auto flex items-center gap-[1rem] relative w-fit">
         <DropdownButton icon={faShoppingCart} arr={cart}>
           <DropdownMenu
             arr={cart}

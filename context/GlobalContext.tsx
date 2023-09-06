@@ -6,6 +6,7 @@ import postRequest from "@/helpers/postRequest";
 import user from "@/interfaces/user";
 import cursos from "@/interfaces/cursos";
 import diplomas from "@/interfaces/diplomas";
+import msg from "@/interfaces/msg";
 
 export const globalContext = React.createContext<values>({
   cart: [],
@@ -29,12 +30,7 @@ interface values {
   diplomas:Array<diplomas>|[]
 }
 
-interface msg
-{
-  show:boolean,
-  type?:'fail'|'success'|'alert',
-  content?:string,
-}
+
 
 interface props
 {

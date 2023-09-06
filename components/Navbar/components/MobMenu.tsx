@@ -14,7 +14,7 @@ export const MobMenu = ({
     <nav
       className={`fixed left-0 bg-[#fff] hidden nav-bar:block top-0 transition-all duration-200 ${
         show ? "translate-x-[0]" : "translate-x-[-100%]"
-      } z-[99999] w-[375px] h-[100%] py-[.8rem] px-[1rem] overflow-y-auto`}
+      } w-[375px] h-[100%] py-[.8rem] px-[1rem] overflow-y-auto`}
     >
       <div className="flex justify-between mb-[2rem]">
         <Image

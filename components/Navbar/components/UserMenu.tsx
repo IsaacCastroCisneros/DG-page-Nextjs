@@ -37,7 +37,7 @@ export const UserMenu = () =>
         </Menu.Button>
         <MyTransition>
           <Menu.Items>
-            <ul className="absolute bottom-0 translate-y-[100%] z-[9999] bg-[#fff] right-0 overflow-hidden rounded-[1rem] pb-[.7rem] border-[1px] border-borderGrey1">
+            <ul className="absolute bottom-0 translate-y-[100%] bg-[#fff] right-0 overflow-hidden rounded-[1rem] pb-[.7rem] border-[1px] border-borderGrey1">
               <li className="flex p-[.8rem] justify-between">
                 <Image
                   src={"/img/avatar_25533.webp"}

@@ -18,6 +18,8 @@ export const DropdownMenu = (props:props) =>
 {
   const { children, mob = false, title, subtitle, type, arr, setShow=()=>null } = props;
 
+
+
   return (
     <section
       className={`rounded-[.5rem] ${

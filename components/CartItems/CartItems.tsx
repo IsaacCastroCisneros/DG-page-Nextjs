@@ -28,12 +28,12 @@ function CartItem(props:cartItem)
 {
   const{setCart}=useContext(globalContext)
 
-  const{id,name,img,price}=props 
+  const{id,titulo,imagen,precio}=props 
 
   return (
     <li className="flex items-center gap-[1rem] relative nav-bar:text-[.7rem] p-[.5rem]">
       <Image
-        src={img}
+        src={imagen}
         width={100}
         height={67}
         alt="DG-cartImage"
@@ -41,15 +41,15 @@ function CartItem(props:cartItem)
       />
       <section className="flex-1 flex flex-col">
         <strong className="line-clamp-3 text-ellipsis overflow-hidden">
-          {name}
+          {titulo}
         </strong>
         <strong className="capitalize">diploma</strong>
         <span className="flex items-center justify-between gap-[.1rem] flex-wrap">
           <strong className="text-[20px] text-red-500 nav-bar:text-[15px]">
-            S/{Number(price.discount).toFixed(2)}
+            S/{Number(precio.final).toFixed(2)}
           </strong>
           <span className="line-through">
-            S/. {Number(price.normal).toFixed(2)}
+            S/. {Number(precio.normal).toFixed(2)}
           </span>
         </span>
       </section>

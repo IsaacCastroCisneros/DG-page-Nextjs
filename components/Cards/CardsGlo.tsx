@@ -2,6 +2,9 @@
 
 import { globalContext } from "@/context/GlobalContext"
 import parsearFecha from "@/helpers/parsearFecha"
+import useCart from "@/hooks/useCart"
+import cartItem from "@/interfaces/cartItem"
+import msg from "@/interfaces/msg"
 import programData from "@/types/programData"
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons"
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons"
@@ -9,12 +12,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
 import Link from "next/link"
 import { useContext } from "react"
+import {Dispatch,SetStateAction} from "react"
 
 
 export const CardsGlo = (props:programData) => 
 {
     const{id,titulo,tipo,precio,inicio,imagen,asesores,etiqueta}=props  
-    const{setCart,setShowMsg,user}=useContext(globalContext)
+    const{user}=useContext(globalContext)
+    const{updatingCart}=useCart()
 
     return (
       <>
@@ -59,21 +64,20 @@ export const CardsGlo = (props:programData) =>
                     width="20"
                     height="20"
                   />{" "}
-                  {
-                    inicio.split('-')[2]
-                  }
+                  {inicio.split("-")[2]}
                   &nbsp;de&nbsp;
-                  {
-                    parsearFecha(inicio)
-                  }
+                  {parsearFecha(inicio)}
                 </p>
               </div>
               <div className="w-full flex justify-between mt-3">
                 <div className="bg-[#FFC107] rounded-md p-2 px-[1rem]">
                   <p className="text-xs">
-                    Normal <span className="line-through">s/.{precio.normal}</span>
+                    Normal{" "}
+                    <span className="line-through">s/.{precio.normal}</span>
                   </p>
-                  <p className="font-bold text-2xl">S/ {precio.final.toFixed(2)}</p>
+                  <p className="font-bold text-2xl">
+                    S/ {precio.final.toFixed(2)}
+                  </p>
                 </div>
                 <div className="text-rojo border border-rojo rounded-md p-2 font-bold">
                   <p className="text-2xl">{precio.descuento}%</p>
@@ -96,23 +100,14 @@ export const CardsGlo = (props:programData) =>
                 </Link>
                 <button
                   className="flex items-center justify-center border border-black rounded-md p-2 hover:bg-violet-500 hover:text-white hover:border-white"
-                  onClick={() => {
-                    setCart((prev) => {
-                      const isIn = prev.find((item) => item.id === id);
-                      if (isIn) return prev;
-
-                      setShowMsg({ show: true });
-                      return [
-                        ...prev,
-                        {
-                          img: "https://s3.us-west-2.amazonaws.com/uploads-desarrolloglobal.pe/2022/05/Presupuesto+Publico+en+el+SIAF+RP.webp",
-                          name: "PREPARACIÓN PARA EL EXAMEN DE CERTIFICACIÓN ANTE OSCE",
-                          price: { discount: "327", normal: "527" },
-                          id,
-                        },
-                      ];
-                    });
-                  }}
+                  onClick={() =>
+                    updatingCart({
+                      id,
+                      imagen,
+                      titulo,
+                      precio,
+                    })
+                  }
                 >
                   <FontAwesomeIcon icon={faCartShopping} size="lg" />
                 </button>
@@ -123,3 +118,6 @@ export const CardsGlo = (props:programData) =>
       </>
     );
 }
+
+
+
