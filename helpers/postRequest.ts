@@ -3,7 +3,7 @@ import gettingUrl from "./gettingUrl"
 
 export default async function postRequest(type:apiurl,data:FormData,prospecto:boolean=false)
 {
-  const url =gettingUrl(type,'',prospecto)
+  const url =gettingUrl({type,prospecto})
 
   try
   {

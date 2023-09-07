@@ -24,6 +24,7 @@ export const LoginForm =() =>
   form.append('correo',values.correoElectronico)
   form.append('clave',values.contraseña)
 
+
   return (
     <>
       <strong className="text-[24px] mb-[1rem] block">Bienvenidos 🙂</strong>

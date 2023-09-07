@@ -32,23 +32,28 @@ export const MyForm = (props:props) =>
     autoLogin
   } = props;
 
-  const{setUser}=useContext(globalContext)
+  const{setUser,setShowMsg}=useContext(globalContext)
 
   return (
     <form
       className="flex-1 flex justify-between flex-col"
       onSubmit={async(e) => 
       {
-        if(!isOk)return
         e.preventDefault();
+        if(!isOk)return
 
         const {res,values,err}=await submit()
-        if(err)return
+        if(err||(res===false))
+        {
+          setShowMsg({show:true,type:"fail",content:"A ocurrido un error vuelve a intentarlo"})
+          return 
+        }
 
         if(res)
         {
           if(user)
           {
+            setShowMsg({show:true,content:"¡Bievenido a Desarrollog Global!"})
             if(autoLogin)
             {
               const form = new FormData()
@@ -57,7 +62,9 @@ export const MyForm = (props:props) =>
               const {res}= await postRequest('login',form)
               storing(res)
               setUser(res)
+              document.cookie = `token=${res.token};domain=.desarrolloglobal.pe`;
               setIsOpen(false)
+
               return
             }
 

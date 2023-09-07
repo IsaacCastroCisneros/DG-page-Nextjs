@@ -11,23 +11,27 @@ import { Menu } from '@headlessui/react';
 import MyTransition from '@/components/MyTransition/MyTransition';
 import { globalContext } from '@/context/GlobalContext';
 import postRequest from '@/helpers/postRequest';
+import user from '@/interfaces/user';
 
 export const UserMenu = () => 
 {
+  const{user}=useContext(globalContext)
+  const{avatar,nombre,correo}=user as user
+
   return (
     <div className="flex relative">
       <Menu>
         <Image
-          src={"/img/avatar_25533.webp"}
+          src={avatar}
           className="rounded-[100%] mr-[1rem] nav-bar:hidden"
           alt="avatar de usuario"
           height={50}
           width={50}
         />
         <Menu.Button className="flex gap-[.5rem] items-center">
-          <strong className="my-hover nav-bar:hidden">Hola Usuario</strong>
+          <strong className="my-hover nav-bar:hidden">{nombre}</strong>
           <Image
-            src={"/img/avatar_25533.webp"}
+            src={avatar}
             className="rounded-[100%] h-[45px] w-[45px] hidden nav-bar:block"
             alt="avatar de usuario"
             height={50}
@@ -40,21 +44,23 @@ export const UserMenu = () =>
             <ul className="absolute bottom-0 translate-y-[100%] bg-[#fff] right-0 overflow-hidden rounded-[1rem] pb-[.7rem] border-[1px] border-borderGrey1">
               <li className="flex p-[.8rem] justify-between">
                 <Image
-                  src={"/img/avatar_25533.webp"}
+                  src={avatar}
                   className="rounded-[100%] nav-bar:h-[45px] w-[45px]"
-                  alt="DG-avatar"
+                  alt="avatar de usuario"
                   height={50}
                   width={50}
                 />
                 <div className="flex-1 pl-[.5rem]">
                   <strong className="block whitespace-nowrap text-ellipsis overflow-hidden max-w-[7.3rem]">
-                    Usuario
+                    {nombre}
                   </strong>
                   <p
                     title="prgmddg1@gmail.com"
                     className="max-w-[7.3rem] block whitespace-nowrap overflow-hidden text-ellipsis"
                   >
-                    prgmddg1@gmail.com
+                    {
+                      correo
+                    }
                   </p>
                 </div>
               </li>
@@ -72,7 +78,7 @@ export const UserMenu = () =>
 
 function Item({icon,label,href}:menuOption)
 {
-  const{user,setUser}=useContext(globalContext)
+  const{user,setUser,setShowMsg}=useContext(globalContext)
 
   function Content()
   {
@@ -81,7 +87,7 @@ function Item({icon,label,href}:menuOption)
         <span className="w-[1.5rem] flex justify-start">
           <FontAwesomeIcon icon={icon} />
         </span>
-        <span className="flex-1 whitespace-nowrap">{label}</span>
+        <span className="flex-1 whitespace-nowrap text-left">{label}</span>
       </>
     );
   }
@@ -111,6 +117,7 @@ function Item({icon,label,href}:menuOption)
             {
                localStorage.removeItem('DG-USER')
                setUser(undefined)
+               setShowMsg({content:"Se a Cerrado su Sesion",show:true})
             } 
           }}
          >

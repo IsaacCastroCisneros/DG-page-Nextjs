@@ -4,7 +4,8 @@ import { globalContext } from '@/context/GlobalContext'
 import React, { useContext,useState} from 'react'
 import { Transition } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import { faCheckCircle, faTriangleExclamation, faXmarkCircle } from '@fortawesome/free-solid-svg-icons'
+import { IconProp } from '@fortawesome/fontawesome-svg-core'
 
 export const TheMsg = () => 
 {
@@ -18,15 +19,16 @@ export const TheMsg = () =>
     },1500)
   }
   const type =showMsg.type
-  let color =''  
+  let options:{color:string,icon:IconProp} ={color:"bg-green-500",icon:faCheckCircle}  
 
-  if(type==="fail")color="bg-red-500"
-  if(type==="success")color="bg-green-500"
-  if(type==="alert")color="bg-yellow-500"
-  if(!type)color="bg-green-500"
+  if(type==="fail")options={color:"bg-red-500",icon:faXmarkCircle} 
+  if(type==="success")options={color:"bg-green-500",icon:faCheckCircle} 
+  if(type==="alert")options={color:"bg-yellow-500",icon:faTriangleExclamation}
+
+  const{color,icon}=options
 
   return (
-    <div className="fixed right-[2rem] top-0 z-[9999999]">
+    <div className="fixed right-[2rem] top-0 z-[99999999999999999999] 800px:right-[.6rem]">
       <Transition
         show={showMsg.show}
         enter="transition-all duration-200"
@@ -36,7 +38,7 @@ export const TheMsg = () =>
         leaveFrom="opacity-1 translate-y-[.5rem]"
         leaveTo="opacity-0 translate-y-[1rem]"
       >
-        <div className={`${color} text-[#fff] px-[2rem] py-[.4rem] font-bold flex text-[1.4rem] items-center gap-[.5rem] rounded-[.5rem]`}><FontAwesomeIcon icon={faCheckCircle} />{showMsg.content}</div>
+        <div className={`${color} text-[#fff] px-[1rem] 800px:font-normal 800px:px-[1rem] py-[.4rem] font-bold flex text-[1.4rem] 800px:text-[1.1rem] items-center gap-[.5rem] rounded-[.5rem]`}><FontAwesomeIcon icon={icon} />{showMsg.content}</div>
       </Transition>
     </div>
   );

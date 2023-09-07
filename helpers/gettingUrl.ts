@@ -1,7 +1,18 @@
 import apiurl from "@/types/apiUrl";
 
-export default function gettingUrl(type:apiurl,tag:string="",prospecto:boolean=false)
+interface props
 {
+  type:apiurl
+  tag?:string
+  prospecto?:boolean
+  id?:string
+  limit?:string
+}
+
+export default function gettingUrl(params:props)
+{
+    const{type,tag="",prospecto=false,id="",limit=""}=params
+
     const url ="https://aula.desarrolloglobal.pe/v03/api/"
 
     switch(type)
@@ -54,10 +65,10 @@ export default function gettingUrl(type:apiurl,tag:string="",prospecto:boolean=f
             {
               return `${url}sesiones/registrar`;
             }
-       /*  case 'seminarios':
+        case 'seminarios':
         {
            return `https://aula.desarrolloglobal.pe/v03/api/seminarios/${id}${limit}?offset=0` 
-        } */
+        }
   
         default: return ''
     }

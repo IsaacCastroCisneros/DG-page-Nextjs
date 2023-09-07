@@ -2,6 +2,7 @@ import React, { SetStateAction } from 'react'
 import Image from 'next/image';
 import { options } from '../helpers/options';
 import { MobMenuOption } from './MobMenuOption';
+import { Login } from '..';
 
 export const MobMenu = ({
   setShow,
@@ -14,7 +15,7 @@ export const MobMenu = ({
     <nav
       className={`fixed left-0 bg-[#fff] hidden nav-bar:block top-0 transition-all duration-200 ${
         show ? "translate-x-[0]" : "translate-x-[-100%]"
-      } w-[375px] h-[100%] py-[.8rem] px-[1rem] overflow-y-auto`}
+      } w-[375px] h-[100%] py-[.8rem] px-[1rem] overflow-y-auto z-[9999999]`}
     >
       <div className="flex justify-between mb-[2rem]">
         <Image
@@ -34,6 +35,9 @@ export const MobMenu = ({
             show={show}
           />
         ))}
+        <div onClick={() => setShow(false)}>
+          <Login />
+        </div>
       </ul>
     </nav>
   );

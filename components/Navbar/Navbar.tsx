@@ -55,7 +55,7 @@ export const Navbar = () =>
         }
         <NavMobMenu />
         {
-          !user&&<Login />
+          !user&& <div className='800px:hidden'><Login /></div> 
         }
       </div>
     </nav>

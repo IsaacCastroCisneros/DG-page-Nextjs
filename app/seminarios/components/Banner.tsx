@@ -1,26 +1,47 @@
+import { faTelegram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 
 
 export const Banner = () => {
     return (
-        <section className="bg-[#000b4e]">
-            <article className="container mx-auto">
-                <div className="flex w-full items-center">
-                    <div className="w-full lg:w-1/2 p-10 space-y-3">
-                        <p className='font-bold text-4xl text-white w-1/2'>Seminarios en Gestion Publica</p>
-                        <div className='flex items-center gap-3'>
-                            <p className='text-3xl'>👉</p>
-                            <p className='bg-[#ffc107] font-bold text-lg px-3 rounded-full'>Participa Gratis aqui</p>
-                        </div>
-                        <p className='text-white w-[70%]'>Regístrate ó únete a nuestros grupos de WhatsApp y Telegram, no te pierdas ningún seminarios en vivo.</p>
-                        <button className='bg-[#0d6efd] text-white font-bold py-2 px-16 rounded-md block'>Registrame por Telegram</button>
-                        <button className='bg-white text-black font-bold py-2 px-16 rounded-md'>Registrame por Telegram</button>
-                    </div>
-                    <div className="w-full lg:w-1/2 relative"> 
-                        <Image src="/img/bannerSeminario.webp" width={746} height={507} alt='Desarrollo Global - Seminarios' className='' />
-                    </div>
-                </div>
-            </article>
-        </section>
-    )
+      <section className="bg-[#000b4e] block px-[1rem]">
+        <article className="container mx-auto">
+          <div className="flex w-full items-center">
+            <div className="w-[560px] flex flex-col gap-[.8rem] py-[2rem] 1500px:w-[100%] 1500px:items-center">
+              <p className="font-bold text-4xl text-white w-1/2 1500px:w-[100%] 1500px:text-center">
+                Seminarios en Gestion Publica
+              </p>
+              <div className="flex items-center gap-3">
+                <p className="text-3xl">👉</p>
+                <p className="bg-[#ffc107] font-bold text-lg px-3 rounded-full">
+                  Participa Gratis aqui
+                </p>
+              </div>
+              <p className="text-white w-[70%] block mb-[.5rem] 1500px:text-center">
+                Regístrate ó únete a nuestros grupos de WhatsApp y Telegram, no
+                te pierdas ningún seminarios en vivo.
+              </p>
+              <a target='_blank' href='https://t.me/DesarrolloGlobal' className="bg-[#0d6efd] w-[100%] max-w-[24rem] 1500px:px-[1rem] text-white font-bold py-2 px-16 rounded-md flex gap-[1rem] items-center justify-center">
+                <FontAwesomeIcon size="xl" icon={faTelegram} /> Registrame por
+                Telegram
+              </a>
+              <a target='_blank' href='https://chat.whatsapp.com/Lgx182kXXFCJEnJtwvYg4w' className="bg-white w-[100%] 1500px:px-[1rem] max-w-[24rem] text-black font-bold py-2 px-16 rounded-md gap-[1rem] flex justify-center items-center">
+                <FontAwesomeIcon icon={faWhatsapp} size="xl" /> Registrame por
+                Telegram
+              </a>
+            </div>
+            <div className="relative flex-[1] 1500px:hidden">
+              <Image
+                src="/img/bannerSeminario.webp"
+                width={746}
+                height={507}
+                alt="hoombre de traje sentado en frente de una laptop"
+                className="relative translate-y-[3.1rem]"
+              />
+            </div>
+          </div>
+        </article>
+      </section>
+    );
 }

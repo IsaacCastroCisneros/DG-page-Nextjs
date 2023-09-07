@@ -71,6 +71,8 @@ export const SignupForm = () =>
           <MyInput label="Contraseña" type='password' onChange={(e)=>setValues(prev=>{return{...prev,contraseña:e.target.value}})} />
         </MyInputFlexContainer>
         <MyInput label='Repetir Contraseña' type='password' onChange={(e)=>setValues(prev=>{return{...prev,repetirContraseña:e.target.value}})} />
+        <span className='text-red-500 mt-[.4rem] block'>*Las contraseñas deben ser iguales</span>
+        <span className='text-red-500'>*El correo no se debe de encontrar registrado</span>
         <CheckBoxTerminos values={values} setValues={setValues} />
       </MyForm>
     </>

@@ -2,10 +2,9 @@ import axios from "axios";
 import gettingUrl from "./gettingUrl";
 import apiurl from "@/types/apiUrl";
 
-
-export default async function getRequest(apiUrl:apiurl,tag:string="")
+export default async function getRequest(type:apiurl,tag:string="",id:string="",limit:string="")
 {
-  const url = gettingUrl(apiUrl,tag)
+  const url = gettingUrl({type,tag,id,limit})
 
    try
    {
