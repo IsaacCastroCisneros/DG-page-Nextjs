@@ -2,8 +2,10 @@
 
 import { MyPopUp } from '@/components/MyPopUp/MyPopUp'
 import React, { Dispatch, SetStateAction, useState } from 'react'
-import { NavbarForm } from './NavbarForm'
-import MyType from '../types/MyType'
+import { NavbarForm } from './components/NavbarForm'
+import MyType from '../Navbar/types/MyType'
+import { twMerge } from 'tailwind-merge'
+import {useEffect} from 'react'
 
 export const loginContext = React.createContext<values>({
   show: false,
@@ -20,15 +22,31 @@ interface values {
   setType: Dispatch<SetStateAction<MyType>>;
 }
 
-export const Login = () => 
+interface props
+{
+  styles?:string
+  label?:string
+  initialType?:'login'|'signup'
+}
+
+const LoginSignup = ({styles,label,initialType}:props) => 
 {
   const[show,setShow]=useState<boolean>(false)
   const[type,setType]=useState<MyType>('login')
 
+  useEffect(()=>
+  {
+    if(initialType)
+    {
+      setType(initialType)
+    }
+
+  },[initialType])
+
   function settingShow(bool:boolean)
   {
     setShow(bool)
-    setType('login')
+    setType(initialType||'login')
   }
 
   const values =
@@ -42,10 +60,12 @@ export const Login = () =>
   return (
     <loginContext.Provider value={values}>
       <button
-        className="font-bold py-[8px] bg-[#c2c8f9] px-[24px] text-primary rounded-[.5rem]"
+        className={twMerge("font-bold py-[8px] bg-[#c2c8f9] px-[24px] text-primary rounded-[.5rem]",styles)} 
         onClick={() => setShow(true)}
       >
-        Ingreso al Aula Virtual
+        {
+          label||'Ingreso al Aula Virtual'
+        }
       </button>
       <MyPopUp
         setIsOpen={settingShow}
@@ -57,3 +77,5 @@ export const Login = () =>
     </loginContext.Provider>
   );
 }
+
+export default LoginSignup

@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import Mytype from '../types/MyType';
+import Mytype from '../../Navbar/types/MyType';
 import { LoginForm } from './LoginForm';
 import { SignupForm } from './SignupForm';
 

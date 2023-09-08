@@ -1,12 +1,14 @@
 import parsearFecha from '@/helpers/parsearFecha';
+import twentyfourToTwelve from '@/helpers/twentyfourToTwelve';
 import seminarios from '@/interfaces/seminarios';
 import { faCalendar, faClock, faEye, faLineChart, faVideoCamera } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const CardsSeminar = (props:seminarios) => 
 {
-  const{banner,titulo,fecha,hora}=props 
+  const{banner,titulo,fecha,hora,etiqueta}=props 
 
   return (
     <div className="w-[302px] max-w-[302px] mx-auto h-[466px] flex flex-col rounded-[.3rem] overflow-hidden 370px:w-[100%]">
@@ -31,27 +33,13 @@ export const CardsSeminar = (props:seminarios) =>
           <p className="text-white font-bold flex items-center gap-3">
             <FontAwesomeIcon icon={faClock} />{twentyfourToTwelve(hora)}
           </p>
-          <button className="w-full border border-white text-white font-bold flex items-center justify-center py-3 rounded-md gap-3 mt-5">
+          <Link href={`/seminarios/${etiqueta}`} className="w-full border border-white text-white font-bold flex items-center justify-center py-3 rounded-md gap-3 mt-5">
             <FontAwesomeIcon icon={faEye} />
             Ver Seminario Realizado
-          </button>
+          </Link>
         </div>
       </div>
     </div>
   );
 }
 
-function twentyfourToTwelve(horaFull:string)
-{
-    const arr = horaFull.split(':')
-    arr.pop() 
-
-    const hora:number = Number(arr[0])
-
-    if(hora>13)
-    {
-       return `${hora-12}:${arr[1]} PM`
-    }
-
-    return `${arr.join(':')} AM` 
-}

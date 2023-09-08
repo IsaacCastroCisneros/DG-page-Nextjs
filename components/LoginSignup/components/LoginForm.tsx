@@ -3,7 +3,7 @@
 import { MyForm } from '@/components/MyForm/MyForm'
 import { MyInput } from '@/components/MyInput/MyInput'
 import React,{useContext, useState} from 'react'
-import { loginContext } from './Login'
+import { loginContext } from '../LoginSignup'
 import { CheckBoxTerminos } from '@/components/CheckBoxTerminos/CheckBoxTerminos'
 import postRequest from '@/helpers/postRequest'
 

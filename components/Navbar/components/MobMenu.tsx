@@ -2,7 +2,7 @@ import React, { SetStateAction } from 'react'
 import Image from 'next/image';
 import { options } from '../helpers/options';
 import { MobMenuOption } from './MobMenuOption';
-import { Login } from '..';
+import LoginSignup from '@/components/LoginSignup/LoginSignup';
 
 export const MobMenu = ({
   setShow,
@@ -36,7 +36,7 @@ export const MobMenu = ({
           />
         ))}
         <div onClick={() => setShow(false)}>
-          <Login />
+          <LoginSignup/>
         </div>
       </ul>
     </nav>
