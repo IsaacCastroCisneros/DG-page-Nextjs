@@ -67,7 +67,7 @@ export default function gettingUrl(params:props)
             }
         case 'seminarios':
         {
-           return `https://aula.desarrolloglobal.pe/v03/api/seminarios/${id}${limit}?offset=0` 
+           return `https://aula.desarrolloglobal.pe/v03/api/seminarios/${tag}` 
         }
   
         default: return ''
