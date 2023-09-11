@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 
 export default function LoginSigIn() 
 {
-  const[show,setShow]=useState<boolean>(false)
 
   return (
     <>

@@ -2,8 +2,9 @@ import React,{Fragment, ReactNode} from 'react'
 import { Dialog,Transition } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { twMerge } from 'tailwind-merge';
 
-export const MyPopUp = ({isOpen,setIsOpen,popUp}:{popUp:ReactNode,isOpen:boolean,setIsOpen:(e:any)=>void}) => 
+export const MyPopUp = ({isOpen,setIsOpen,popUp,button}:{popUp:ReactNode,isOpen:boolean,setIsOpen:(e:any)=>void,button?:string}) => 
 {
     return (
       <>
@@ -41,7 +42,7 @@ export const MyPopUp = ({isOpen,setIsOpen,popUp}:{popUp:ReactNode,isOpen:boolean
               >
                 <div className="relative rounded-[.5rem] overflow-hidden">
                   {popUp}
-                  <button className='absolute top-[1rem] right-[1rem] text-[#858484] hover:text-[#333]'
+                  <button className={twMerge('absolute top-[1rem] right-[1rem] text-[#858484] hover:text-[#333]',button)} 
                    onClick={()=>setIsOpen(false)}
                    >
                     <FontAwesomeIcon icon={faXmark} />

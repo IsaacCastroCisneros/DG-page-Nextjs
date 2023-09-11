@@ -14,7 +14,7 @@ export default function VideoSemi(props:seminarios)
   return (
     <div className="flex-1 bg-[#000a48]">
       <Video src={`http://player.vimeo.com/video/${id_video}`} />
-      <div className="flex flex-col">
+      <div className="flex flex-col 1500px:hidden">
         <section className="px-[2.2rem] py-[.8rem] flex border-b-[2px] border-[#14206b] items-center">
           <div className="bg-[#3f8dfd] text-[#fff] px-[.9rem] py-[.8rem] rounded-[.4rem] mr-[2.2rem]">
             <FontAwesomeIcon icon={faVideoCamera} size="2xl" />

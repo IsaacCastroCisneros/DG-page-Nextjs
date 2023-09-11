@@ -51,6 +51,7 @@ export default async function RootLayout({
       />
       <Script src="https://api.micuentaweb.pe/static/js/krypton-client/V4.0/ext/classic.js"/>
       <Script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"/>
+      <Script src="https://api.micuentaweb.pe/static/js/krypton-client/V4.0/ext/classic.js" />
       <MyScript/>
       <GlobalContext
         cursos={errC ? [] : cursos}

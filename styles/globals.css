@@ -91,6 +91,33 @@ h1,h2,h3
    -moz-animation-duration: 1s;
 }
 
+.kr-installment-number,.kr-first-installment-delay
+{
+  display: none;
+}
+.kr-payment-button
+{
+  margin: 3rem 0 0 0;
+  width: 100% !important;
+  color: #b2b9c2 !important;
+  font-weight:bold !important;
+  padding: .8rem 0;
+  border-radius: .5rem;
+  background-color: #e7e9ec !important;
+}
+.kr-spinner
+{
+  display: none;
+}
+.kr-bounce2::after
+{
+  content: "Procesando...";
+}
+.alertSwag
+{
+  background-color: #192677;
+}
+
 @keyframes swing {
    20% {
       transform: rotate3d(0, 0, 1, 15deg);

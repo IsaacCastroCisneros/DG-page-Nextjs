@@ -9,9 +9,8 @@ export default function useCart()
   
    function updatingCart(item:cartItem)
    {
-    const{imagen,titulo,precio,id}=item
+    const{imagen,titulo,precio,id,tipo,total_sesiones}=item
 
-       console.log('fd')
        setCart((prev) => {
            const isIn = prev.find((item) => item.id === id);
            if (isIn)
@@ -28,6 +27,8 @@ export default function useCart()
                titulo,
                precio,
                id,
+               tipo,
+               total_sesiones
              },
            ];
          });

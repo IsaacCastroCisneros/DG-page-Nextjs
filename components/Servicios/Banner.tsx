@@ -17,7 +17,7 @@ export const Banner = ({tipo} : {tipo: String}) => {
                         <div className='text-white text-xl space-y-1'>
                             <p className='flex items-center gap-2'><Image src="/img/icons/VistoBuenoCursos.webp" alt='checkmark' width="23" height="23" />12 años dictando Cursos virtuales</p>
                            <p className='flex items-center gap-2'><Image src="/img/icons/VistoBuenoCursos.webp" alt='checkmark' width="23" height="23" />Certificación de calidad  ISO 9001-2015</p>
-                           <p className='flex items-center gap-2'><Image src="/img/icons/VistoBuenoCursos.webp" alt='checkmark' width="23" height="23" />Certificación Universitaria</p>
+                           <p className='flex items-center gap-2'><Image src="/img/icons/VistoBuenoCursos.webp" alt='checkmark' width="23" height="23" />Certificación Desarrollo Global</p>
                            <p className='flex items-center gap-2'><Image src="/img/icons/VistoBuenoCursos.webp" alt='checkmark' width="23" height="23" />Aula Virtual &#34;Plataforma Exclusiva&#34;</p>
                            <p className='flex items-center gap-2'><Image src="/img/icons/VistoBuenoCursos.webp" alt='checkmark' width="23" height="23" />El mejor soporte para alumnos</p>
                            <p className='flex items-center gap-2'><Image src="/img/icons/VistoBuenoCursos.webp" alt='checkmark' width="23" height="23" />Docentes Especializados</p>

@@ -25,7 +25,7 @@ export const Header = () =>
     const{user}=useContext(globalContext)
     const{updatingCart}=useCart()
     
-    const{titulo,tipo,descripcion,imagen,precio,id,asesores}=program as programData
+    const{titulo,tipo,descripcion,imagen,precio,id,asesores,total_sesiones}=program as programData
 
     const[values,setValues]=useState<{nombres:string,telefono:string,email:string}>({nombres:"",telefono:"",email:""})
     const pathName= usePathname()
@@ -188,7 +188,7 @@ export const Header = () =>
                       <strong className='text-[1.5rem]'>WHATSAPP</strong>
                     </div>
                   </a>
-                  <button onClick={()=>updatingCart({id,titulo,precio,imagen})} className='flex gap-[1rem] justify-center bg-myBlue1 text-white items-center px-[1rem] py-[.8rem] w-full rounded-md mt-[.5rem]'>
+                  <button onClick={()=>updatingCart({id,titulo,precio,imagen,tipo,total_sesiones})} className='flex gap-[1rem] justify-center bg-myBlue1 text-white items-center px-[1rem] py-[.8rem] w-full rounded-md mt-[.5rem]'>
                     <FontAwesomeIcon size='xl'  icon={faCartShopping}/>
                     <strong className='capitalize' >agregar al carrtio</strong>
                   </button>

@@ -17,7 +17,7 @@ export const ComponentDocente = () =>
 
 
     return (
-      <section className="py-[1rem]">
+      <section className="py-[1rem]" id='Profesores'>
         <article className="mx-auto container">
           <div className="font-bold p-5 w-full lg:w-[70%] xl:w-[70%] 2xl:w-[70%]">
             <p className="text-center text-4xl">Profesores</p>

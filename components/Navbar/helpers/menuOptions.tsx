@@ -1,6 +1,5 @@
-import postRequest from "@/helpers/postRequest";
 import menuOption from "../interfaces/menuOption";
-import { faLaptop,faUserCircle,faLayerGroup,faCalendar,faCubes,faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { faLaptop,faUserCircle,faLayerGroup,faCalendar,faCubes} from '@fortawesome/free-solid-svg-icons';
 
 const menuOptions:Array<menuOption>=
 [
@@ -28,11 +27,6 @@ const menuOptions:Array<menuOption>=
     icon:faCalendar,
     label:"Sesion Hoy y mañana",
     href:"https://aula.desarrolloglobal.pe/sesiones_hoy_manana.php"
-  },
-  {
-    label:"Administrador",
-    icon:faCubes,
-    href:"https://aula.desarrolloglobal.pe/admin/"
   },
 ]
 

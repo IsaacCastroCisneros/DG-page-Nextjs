@@ -14,7 +14,7 @@ export const ComponentsPagos = () =>
 {
     const[show,setShow]=useState<boolean>(false)
     const{program}=useContext(programContext)
-    const{id,titulo,imagen,precio}=program as programData
+    const{id,titulo,imagen,precio,tipo,total_sesiones}=program as programData
     const{updatingCart}=useCart()
 
     return (
@@ -60,7 +60,7 @@ export const ComponentsPagos = () =>
             </div>
           }
         />
-        <section className="py-[1.5rem] px-[1rem]">
+        <section className="py-[1.5rem] px-[1rem]" id='Pagar en Linea'>
           <article className="container mx-auto">
             <div className="w-full lg:w-[70%] xl:w-[70%] 2xl:w-[70%] lg:p-5 xl:p-5 2xl:p-5">
               <p className="text-3xl font-bold mt-5">
@@ -257,7 +257,7 @@ export const ComponentsPagos = () =>
                     </p>
                   </div>
                   <div>
-                    <button onClick={()=>updatingCart({id,precio,imagen,titulo})}  className="text-white bg-blue-500 flex items-center text-lg font-bold justify-center gap-3 rounded-md w-full lg:w-[246px] py-3">
+                    <button onClick={()=>updatingCart({id,precio,imagen,titulo,tipo,total_sesiones})}  className="text-white bg-blue-500 flex items-center text-lg font-bold justify-center gap-3 rounded-md w-full lg:w-[246px] py-3">
                       <FontAwesomeIcon icon={faShoppingCart} />
                       Agregar al Carrito
                     </button>

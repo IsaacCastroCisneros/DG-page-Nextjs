@@ -42,7 +42,7 @@ export const Contenido = ({data}:{data:any}) =>
               alt="SIAF"
               className="mx-auto w-full rounded-md mt-5 h-full lg:h-[260px]"
             />
-            <p className="font-bold text-center text-2xl mt-10">
+            <p className="font-bold text-center text-2xl mt-10" id='Temario'>
               Contenido Tematico
             </p>
             <div className="mt-10 flex flex-col gap-[1rem]">

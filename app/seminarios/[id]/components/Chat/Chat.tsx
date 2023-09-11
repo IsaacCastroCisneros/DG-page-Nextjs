@@ -39,7 +39,7 @@ export default function Chat()
 
   return (
     <chatContenxt.Provider value={values}>
-      <div className="w-[24.3rem] bg-[#000a48] pt-[.7rem] flex flex-col">
+      <div className="w-[24.3rem] 1500px:w-[100%] bg-[#000a48] pt-[.7rem] flex flex-col">
         <MenuBar />
         <div className="flex-1 flex items-stretch">
           {option === "Chat en Vivo" && <ChatBox />}

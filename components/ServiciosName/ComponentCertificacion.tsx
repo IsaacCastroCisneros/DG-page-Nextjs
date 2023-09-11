@@ -11,7 +11,7 @@ export const ComponentCertificacion = () =>
     const{tipo}=program as programData
 
     return (
-      <section className="bg-[#B8D7FE] py-[1.3rem]">
+      <section className="bg-[#B8D7FE] py-[1.3rem]" id='Certificado'>
         <article className="container mx-auto">
           <div className="w-full lg:w-[70%] xl:w-[70%] 2xl:w-[70%] p-5">
             <p className="text-3xl font-bold mob:text-center">

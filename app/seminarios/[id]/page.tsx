@@ -16,7 +16,7 @@ export default async function page({params}:any)
   return (
     <SeminarioContext seminarios={seminarios}>
       <div className="px-[1rem] bg-[#000a48]">
-        <div className="flex w-[1920px] mx-auto max-w-[100%] gap-[2rem]">
+        <div className="flex w-[1920px] mx-auto max-w-[100%] gap-[2rem] 1500px:flex-col">
           <VideoSemi {...seminarios} />
           <Chat />
         </div>

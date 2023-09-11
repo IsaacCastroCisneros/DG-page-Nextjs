@@ -22,7 +22,7 @@ export const boxes:Array<box>=
   },
   {
     title:"Certificado Digital",
-    desciption:"La certificación se otorga con respaldo universitario, válido para todo tipo de convocatorias.",
+    desciption:"La certificación se otorga con respaldo Desarrollo Global, válido para todo tipo de convocatorias.",
     img:"/img/CertBene.webp",
     alt:"icono de qr"
   },

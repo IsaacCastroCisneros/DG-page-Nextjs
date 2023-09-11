@@ -45,7 +45,7 @@ export const DropdownMenu = (props:props) =>
           {!mob && (
             <Menu.Item>
               <Link
-                href="/pasarela/pagos"
+                href="/pasarela-pagos"
                 className="px-[1rem] py-[.4rem] bg-green-500 capitalize text-[#fff] rounded-[.3rem] font-bold"
               >
                 comprar
@@ -54,7 +54,7 @@ export const DropdownMenu = (props:props) =>
           )}
           {mob && (
             <Link
-              href="/pasarela/pagos"
+              href="/pasarela-pagos"
               className="px-[1rem] py-[.4rem] bg-green-500 capitalize text-[#fff] rounded-[.3rem] font-bold"
               onClick={()=>setShow(false)}
             >

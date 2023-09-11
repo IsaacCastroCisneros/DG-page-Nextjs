@@ -1,7 +1,7 @@
 import Image from 'next/image';
 export const ComponentCapacitarte = () => {
     return (
-        <section className="bg-[#2000d1] py-[1.7rem] px-[1rem]">
+        <section className="bg-[#2000d1] py-[1.7rem] px-[1rem]" id='Beneficios'>
             <article className="text-white container mx-auto">
                 <div className="w-full lg:w-[70%] xl:w-[70%] 2xl:w-[70%] ">
                     <p className="text-center font-bold text-3xl">¿Por qué Capacitarte con nosotros?</p>
@@ -26,8 +26,8 @@ export const ComponentCapacitarte = () => {
                         </div>
                         <div className='bg-[#282828] rounded-md w-[280px] mob:w-[100%] h-[376px] mx-auto p-7'>
                             <Image src="/img/icons/CertificadoDiploma.webp" alt='icono certificado' width="117" height="86" />
-                            <p className='font-bold text-base mt-3'>Certificación Universitaria</p>
-                            <p>La certificación se otorga con respaldo universitario, válido para todo tipo de convocatorias.</p>
+                            <p className='font-bold text-base mt-3'>Certificación Desarrollo Global</p>
+                            <p>La certificación se otorga con respaldo Desarrollo Global, válido para todo tipo de convocatorias.</p>
                         </div>
                         <div className='bg-white text-black rounded-md w-[280px] mob:w-[100%] h-[376px] mx-auto p-7'>
                             <Image src="/img/icons/IconDocentesDiploma.webp" alt='persona usando laptop' width="95" height="91" className='py-5' />

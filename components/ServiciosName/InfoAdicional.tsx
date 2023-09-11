@@ -20,21 +20,21 @@ export const InfoAdicional = () =>
             <article className="container mx-auto p-5">
                 <div className="grid gap-5 lg:gap-0 xl:gap-0 2xl:gap-0 grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 w-full lg:w-[70%] xl:w-[70%] 2xl:w-[70%]">
                     <div className="flex items-center gap-3">
-                        <FontAwesomeIcon  className='text-myBlue1' size='2xl' icon={faCalendar} />
+                        <Image src="/img/IconCalenDiploma.webp" alt='icono de calendario' width={35} height={35} />
                         <div className="text-base font-semibold">
                             <p>Inicio</p>
                             <p className="-mt-1">{inicio.split('-')[2]} de {parsearFecha(inicio)}</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-3">
-                        <FontAwesomeIcon className='text-myBlue1'  size='2xl' icon={faClock} />
+                        <Image src="/img/IconRelojDiploma.webp" alt='icono de reloj' width={32} height={32} />
                         <div className="text-base font-semibold">
                             <p>Cantidad</p>
                             <p className="-mt-1">{total_sesiones} Sesiones</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-3">
-                        <FontAwesomeIcon  className='text-myBlue1' size='2xl' icon={faCertificate} />
+                    <Image src="/img/IconCertiDiploma.webp" alt='icono de certifiacion' width={36} height={32} />
                         <div className="text-base font-semibold">
                             <p>Certificacion</p>
                             <p className="-mt-1">Desarrollo Global</p>

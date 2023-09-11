@@ -67,7 +67,7 @@ export const DropDown=({label}:{label:string})=>
             <BeneficioItem
               img="https://nuevapagina.s3.amazonaws.com/IconMenu2.webp"
               color="text-yellow-500"
-              label="Certificación Universitaria"
+              label="Certificación Desarrollog Global"
               alt="icono de certificado"
             />
             <BeneficioItem

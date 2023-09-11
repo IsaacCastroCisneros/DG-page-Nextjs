@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import menuOption from '../interfaces/menuOption';
 import menuOptions from '../helpers/menuOptions';
-import { faChevronDown, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faCubes, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import { Menu } from '@headlessui/react';
 import MyTransition from '@/components/MyTransition/MyTransition';
 import { globalContext } from '@/context/GlobalContext';
@@ -16,7 +16,9 @@ import user from '@/interfaces/user';
 export const UserMenu = () => 
 {
   const{user}=useContext(globalContext)
-  const{avatar,nombre,correo}=user as user
+  const{avatar,nombre,correo,tipo}=user as user
+
+  console.log(tipo)
 
   return (
     <div className="flex relative">
@@ -67,6 +69,9 @@ export const UserMenu = () =>
               {menuOptions.map((opt, pos) => (
                 <Item {...opt} key={pos} />
               ))}
+              {
+                tipo==="ADMI"&&<Item label='Administrador' icon={faCubes} href="https://aula.desarrolloglobal.pe/admin/" />
+              }
               <Item label='Cerrar Sesion' icon={faRightFromBracket} />
             </ul>
           </Menu.Items>

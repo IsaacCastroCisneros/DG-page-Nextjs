@@ -26,7 +26,7 @@ export default function Pariticipar()
             física de las personas Genera una conversación positiva con
             preguntas claras y <strong>sin spam</strong>
           </p>
-          <button className='px-[1rem] text-center uppercase bg-[#0d6efd] py-[.5rem] w-[100%] rounded-[.3rem] text-[1.1rem] font-bold'
+          <button className='px-[1rem] text-center uppercase 1500px:px-[.5rem] bg-[#0d6efd] py-[.5rem] w-[100%] rounded-[.3rem] text-[1.1rem] font-bold'
            onClick={()=>setParticipar(true)}
            >
              entiendo, quiero pariticipar

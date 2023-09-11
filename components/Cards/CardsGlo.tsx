@@ -17,7 +17,7 @@ import {Dispatch,SetStateAction} from "react"
 
 export const CardsGlo = (props:programData) => 
 {
-    const{id,titulo,tipo,precio,inicio,imagen,asesores,etiqueta}=props  
+    const{id,titulo,tipo,precio,inicio,imagen,asesores,etiqueta,total_sesiones}=props  
     const{user}=useContext(globalContext)
     const{updatingCart}=useCart()
 
@@ -106,6 +106,8 @@ export const CardsGlo = (props:programData) =>
                       imagen,
                       titulo,
                       precio,
+                      tipo,
+                      total_sesiones
                     })
                   }
                 >

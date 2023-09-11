@@ -4,4 +4,6 @@ export default interface cartItem
    titulo:string,
    precio:{final:number,descuento:number,normal:number},
    imagen:string
+   tipo:string
+   total_sesiones:number
 }
