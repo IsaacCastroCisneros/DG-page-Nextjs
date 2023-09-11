@@ -6,7 +6,7 @@ import inHouseCardContext from '../context/inHouseCardContext';
 
 export const ProgramaInHousePopUp = () => 
 {
-  const{titulo}=useContext(inHouseCardContext)
+  const{titulo,descripcion}=useContext(inHouseCardContext)
 
   return (
     <div className="flex">
@@ -71,12 +71,12 @@ export const ProgramaInHousePopUp = () =>
       <section className="w-[581px] p-[48px] bg-[#fff] popUp:px-[24px]">
         <ProgramaInHouse />
         <p className="text-[24px] text-[#0d6efd] my-[1rem]">
-          HABILIDADES BLANDAS (WEB)
+          {titulo}
         </p>
         <p className="mb-[1rem]">
-          Analisa y desarrolla las estratégias para establecer buenas relaciones
-          interpersonales, gestionando tu tiempo y tus emociones a fin de
-          potenciar las estrategias de los objetivos trazad...
+          {
+            descripcion
+          }
         </p>
         <h2 className="text-[32px] mb-[1rem]">Solicíta una proforma aquí</h2>
         <ProgramaInHouseForm />

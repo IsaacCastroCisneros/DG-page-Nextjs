@@ -42,7 +42,7 @@ export const ProgramaInHouseForm = () =>
       label="enviar proforma"
       isOk={isOk}
       setIsOpen={setShow}
-      submit={()=>postRequest('setProspectos',creatingFormData(values,id,titulo))}
+      submit={()=>postRequest("inHouse",creatingFormData(values,id,titulo),true)}
     >
       <MyInputFlexContainer>
         <MyInput

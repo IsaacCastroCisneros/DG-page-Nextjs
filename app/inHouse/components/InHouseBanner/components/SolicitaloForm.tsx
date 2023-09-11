@@ -9,6 +9,7 @@ import { inHouseContext } from '../../../context/InHouseContext';
 import postRequest from '@/helpers/postRequest';
 import cantidadDeAlumnos from '@/app/inHouse/helpers/cantidadDeAlumnos';
 import nivelesDelCurso from '@/app/inHouse/helpers/nivelesDelCurso';
+import validatingRequired from '@/helpers/validateRequired';
 
 interface values
 {
@@ -23,9 +24,9 @@ interface values
 
 export const SolicitaloForm = () => 
 {
-  /* const{res}=useContext(inHouseContext)
+  const{inHouse}=useContext(inHouseContext)
 
-  const programs= res.map(({titulo,id})=> {return{label:titulo,value:`${id}-${titulo}`} } ) */
+  const programs= inHouse.map(({titulo,id})=> {return{label:titulo,value:`${id}-${titulo}`} } )
 
   const[values,setValues]=useState<values>(
     {
@@ -38,8 +39,8 @@ export const SolicitaloForm = () =>
       eligeElProgramaDeTuInteres:''
     }
   )
-
-  const isOk:boolean = Object.values(values).every(entry=>entry!=='')
+  const {entidad,...rest}=values 
+  const isOk:boolean = Object.values(rest).every(entry=>entry!=='')
 
   const{setIsOpen}=useContext(solicitaloAqui)
 
@@ -49,7 +50,7 @@ export const SolicitaloForm = () =>
       setIsOpen={setIsOpen}
       styles="bg-[#e86b2a]"
       isOk={isOk}
-      submit={()=>postRequest("setProspectos",creatingFormData(values))}
+      submit={()=>postRequest("inHouse",creatingFormData(values),true)}
     >
       <MyInputFlexContainer>
         <MyInput
@@ -111,12 +112,13 @@ export const SolicitaloForm = () =>
           onChange={(e) =>
             setValues({ ...values, eligeElProgramaDeTuInteres: e.target.value })
           }
-          options={[]}
+          options={programs}
         />
       </MyInputFlexContainer>
     </MyForm>
   );
 }
+
 
 
 function creatingFormData(values:values)

@@ -15,6 +15,11 @@ export default function gettingUrl(params:props)
 
     const url ="https://aula.desarrolloglobal.pe/v03/api/"
 
+    if(prospecto)
+    {
+       return `https://aula.desarrolloglobal.pe/v03/api/${type}/setProspecto` 
+    }
+
     switch(type)
     {
       case 'modal':
@@ -27,18 +32,10 @@ export default function gettingUrl(params:props)
         }
         case 'cursos':
         {
-            if(prospecto)
-            {
-               return `https://aula.desarrolloglobal.pe/v03/api/${type}/setProspecto` 
-            }
             return 'https://aula.desarrolloglobal.pe/v03/api/cursos/envivo/'+tag
         }
         case 'geo':
         {
-            if(prospecto)
-            {
-               return `https://aula.desarrolloglobal.pe/v03/api/${type}/setProspecto` 
-            }
             return 'https://ipgeolocation.abstractapi.com/v1/?api_key=5439d75ced19410c865a3d67a41f04d6'
         }
         case 'diplomados':
